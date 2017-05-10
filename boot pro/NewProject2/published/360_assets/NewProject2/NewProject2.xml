@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <settings>
+    <preloader image="images/DODGE_BOOT-10.png" />
+    <userInterface showZoomButtons="true" showToolTips="true" showHotspotsButton="true" showFullScreenButton="true" showTogglePlayButton="true" showArrows="true" toolbarAlign="center" toolbarBackColor="transparent" toolbarHoverColor="#808285" toolbarForeColor="#A7A9AE" toolbarBackAlpha="0" toolbarAlpha="1" showProgressNumbers="true" showFullScreenToolbar="false" fullScreenBackColor="#FFFFFF" />
+    <control dragSpeed="0.13" doubleClickZooms="true" disableMouseControl="false" showHighresOnFullScreen="true" mouseHoverDrag="false" hideHotspotsOnLoad="false" hideHotspotsOnZoom="true" rowSensitivity="15" dragSensitivity="10" inBrowserFullScreen="false" doubleClickFullscreen="false" />
+    <rotation firstImage="0" rotate="false" rotatePeriod="7" bounce="false" rotateDirection="-1" forceDirection="false" inertiaRelToDragSpeed="true" inertiaTimeToStop="700" inertiaMaxInterval="120" useInertia="true" flipHorizontalInput="false" flipVerticalInput="false" bounceRows="true" />
+  </settings>
+  <hotspots />
+  <images rows="1" highresWidth="2000" highresHeight="1099">
+    <image src="images/DODGE_BOOT-10.png">
+      <highres src="images/highres/DODGE_BOOT-10.png" />
+    </image>
+    <image src="images/DODGE_BOOT-30.png">
+      <highres src="images/highres/DODGE_BOOT-30.png" />
+    </image>
+    <image src="images/DODGE_BOOT-36.png">
+      <highres src="images/highres/DODGE_BOOT-36.png" />
+    </image>
+  </images>
+</config>
