@@ -10,4 +10,4 @@ $user = "root";
 $pass = "";
 $db_name ="test";
 
-$mysqli = new mysqli($host,$user,$pass,$db_name );
+$conn = new mysqli($host,$user,$pass,$db_name );
