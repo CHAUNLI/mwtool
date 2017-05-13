@@ -6,47 +6,35 @@
  * Time: 2:42 PM
  */
 $app->get('/products',function(){
-
-    require_once ("dbconnect.php");
-
+    $db=new db();
+    $db = $db->connect();
     $queryy = "select * from mw_products order by id";
-
-
-
-    if (!$conn) {
-        echo "Error: Unable to connect to MySQL." . PHP_EOL;
-        echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
-        echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
-        exit;
-    }
-
-    echo "Success: A proper connection to MySQL was made! The my_db database is great." . PHP_EOL;
-    echo "Host information: " . mysqli_get_host_info($conn) . PHP_EOL;
-
-    if($result= $conn->query($queryy)) {
-
+    if($result= $db->query($queryy)) {
        while ($row = $result->fetch_assoc()) {
            $data[] = $row;
        }
     }
-    mysqli_close($conn);
+    mysqli_close($db);
     if(isset($data)){
-        header("Content-Type: application/json");
+        header("Content-Type: application/json;charset=utf-8");
         echo json_encode($data);
+
     }
 
 });
 
 
 $app->get('/products/{id}', function($request){
-    require_once ("dbconnect.php");
-
+    $db=new db();
+    $db = $db->connect();
     $id=$request->getAttribute('id');
     $query ="select * from mw_products where id=$id";
-    $result= $conn->query($query);
+    $result= $db->query($query);
     $data[]=$result->fetch_assoc();
-    header("Content-Type: application/json");
+    header("Content-Type: application/json;charset=utf-8");
     echo json_encode($data);
+
+    mysqli_close($db);
 
 });
 
