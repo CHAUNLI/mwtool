@@ -34,24 +34,34 @@
                 <li class="nav-item active">
                     <a class="nav-link">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link">products</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link">XXXXXXXXX XXXX</a>
-                </li>
                 <li class="nav-item btn-group">
-                    <a class="nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">XXXXX XXXX XXXXXXX</a>
+                    <a class="nav-link dropdown-toggle"  id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <a class="dropdown-item">Action</a>
-                        <a class="dropdown-item">Another action</a>
-                        <a class="dropdown-item">Something else here</a>
+                        <a class="dropdown-item">Toolbox</a>
+                        <a class="dropdown-item">Trailer</a>
+                        <a class="dropdown-item">Canopy</a>
+                        <a class="dropdown-item">Accessory</a>
                     </div>
                 </li>
+                <li class="nav-item" >
+                    <a class="nav-link">Custom Build</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">About Us</a>
+                </li>
             </ul>
-            <form class="form-inline waves-effect waves-light">
-                <input class="form-control" type="text" placeholder="Search">
-            </form>
+
+            <ul class="navbar-nav ml-auto nav-flex-icons">
+                <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light"><i class="fa fa-google-plus"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light"><i class="fa fa-facebook"></i></a>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>
@@ -76,23 +86,19 @@
         <div class="carousel-item active">
             <!--Mask-->
 
-
-
-
-
             <div class="carousel-caption">
 
 
                 <div class="flex-center animated fadeIn">
                     <ul>
                         <li>
-                            <h1 class="h1-responsive font-weight-bold">Custom made</h1></li>
+                            <h1 id="slide1" class="h1-responsive font-weight-bold">Custom made</h1></li>
                         <li>
-                            <p>Build what you want</p>
+                            <p>Maximize Workspace, Minimize Worries</p>
                         </li>
                         <li>
-                            <a target="_blank" href="https://mdbootstrap.com/getting-started/" class="btn btn-primary btn-lg">Contact Us</a>
-                            <a target="_blank" href="https://mdbootstrap.com/material-design-for-bootstrap/" class="btn btn-default btn-lg">Learn more</a>
+                            <a target="_blank" href="#" class="btn btn-primary btn-rounded">Contact Us</a>
+                            <a target="_blank" href="#" class="btn btn-default btn-rounded">Learn more</a>
                         </li>
                     </ul>
 
@@ -116,13 +122,13 @@
                 <div class="flex-center animated fadeIn">
                     <ul>
                         <li>
-                            <h1 class="h1-responsive font-weight-bold">Australia No.1</h1></li>
+                            <h1 id="slide2" class="h1-responsive font-weight-bold">Australia No.1</h1></li>
                         <li>
                             <p>Trailers, Toolboxes & Canopies</p>
                         </li>
                         <li>
-                            <a target="_blank" href="https://mdbootstrap.com/getting-started/" class="btn btn-primary btn-lg">Contact Us</a>
-                            <a target="_blank" href="https://mdbootstrap.com/material-design-for-bootstrap/" class="btn btn-default btn-lg">Learn more</a>
+                            <a target="_blank" href="https://mdbootstrap.com/getting-started/" class="btn btn-primary btn-rounded">Contact Us</a>
+                            <a target="_blank" href="https://mdbootstrap.com/material-design-for-bootstrap/" class="btn btn-default btn-rounded">Learn more</a>
                         </li>
                     </ul>
 
@@ -168,16 +174,16 @@
 </div>
 
 <!--/.Carousel Wrapper-->
-
+<hr class="between-sections">
 <!--<section class="section light-blue">
 <canvas id="myChart"></canvas>
 
 </section>-->
 <section class="section">
-    <div class="container">
-        <h1 class="section-heading">28 Shops In Nationwide</h1>
+    <div id="ammap-section" class="container">
+        <h1 class="section-heading font-weight-bold">28 Shops In Nationwide</h1>
         <p class="section-description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-<div id="map" style="width: 100%; height: 974px;" ></div>
+     <div id="map" style="width: 100%; height: 974px;" ></div>
     </div>
 </section>
 <!--<section class="section">
@@ -186,14 +192,14 @@
    </div>
 </section>
 <!--Section: Features v.3-->
-
+<hr class="between-sections">
 <!--Projects section v.4-->
 <section class="section extra-margins">
 
     <div class="container">
 
     <!--Section heading-->
-    <h1 class="section-heading">Our best product</h1>
+    <h1 class="section-heading font-weight-bold">Our Best Product</h1>
     <!--Section description-->
     <p class="section-description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
@@ -212,7 +218,7 @@
             <!--First row-->
             <div class="row">
                 <div class="col-1 mr-1">
-                    <i class="fa fa-bank fa-2x cyan-text"></i>
+                    <i class="fa fa-check-circle-o fa-2x cyan-text"></i>
                 </div>
                 <div class="col-10">
                     <h4 class="feature-title">Safety</h4>
@@ -226,7 +232,7 @@
             <!--Second row-->
             <div class="row">
                 <div class="col-1 mr-1">
-                    <i class="fa fa-code fa-2x indigo-text"></i>
+                    <i class="fa fa-check-circle-o fa-2x indigo-text"></i>
                 </div>
                 <div class="col-10">
                     <h4 class="feature-title">Technology</h4>
@@ -240,23 +246,14 @@
             <!--Third row-->
             <div class="row">
                 <div class="col-1 mr-1">
-                    <i class="fa fa-money fa-2x blue-text"></i>
+                    <i class="fa fa-check-circle-o fa-2x blue-text"></i>
                 </div>
                 <div class="col-10">
                     <h4 class="feature-title">Service</h4>
                     <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda deleniti hic.</p>
                 </div>
             </div>
-            <!--/Third row-->
-            <div class="row">
-                <div class="col-1 mr-1">
-                    <i class="fa fa-money fa-2x blue-text"></i>
-                </div>
-                <div class="col-10">
-                    <h4 class="feature-title">Service</h4>
-                    <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda deleniti hic.</p>
-                </div>
-            </div>
+
         </div>
         <!--/Second column-->
 
@@ -275,14 +272,14 @@
     <!--/First row-->
 </section>
 <!--/Projects section v.4-->
-
+<hr class="between-sections">
 
 <!--Section: Products v.3-->
 <section class="section">
 
     <div class="container">
     <!--Section heading-->
-    <h1 class="section-heading">Our bestsellers</h1>
+    <h1 class="section-heading font-weight-bold">Our Top Products</h1>
     <!--Section sescription-->
     <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam eum porro a pariatur accusamus veniam. Quia, minima?</p>
 
@@ -296,8 +293,8 @@
             <div class="card">
 
                 <!--Card image-->
-                <div class="view overlay hm-white-slight z-depth-1">
-                    <img src="http://www.trailertek.com/media/catalog/category/ATV-_-QUAD-TRAILERS.jpg" class="img-fluid" alt="">
+                <div class="view overlay hm-white-slight z-depth-0">
+                    <img src="http://cdn2.bigcommerce.com/n-nr1m3w/1hl0xx/products/3747/images/2858/AT0532__48979.1458555129.600.500.jpg?c=2" class="img-fluid" alt="">
                     <a>
                         <div class="mask waves-effect waves-light"></div>
                     </a>
@@ -307,17 +304,14 @@
                 <!--Card content-->
                 <div class="card-block text-center">
                     <!--Category & Title-->
-                    <a href="" class="text-muted"><h5>Shoes</h5></a>
-                    <h4 class="card-title"><strong><a href="">White heels</a></strong></h4>
+                    <a href="" class="text-muted"><h5>Toolboxes</h5></a>
+                    <h4 class="card-title"><strong><a href="">REC Series</a></strong></h4>
 
                     <!--Description-->
-                    <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam.
-                    </p>
-
                     <!--Card footer-->
                     <div class="card-footer">
-                        <span class="left">59$ <span class="discount">199$</span></span>
-                        <span class="right"><a class="" data-toggle="tooltip" data-placement="top" title="Add to Wishlist"><i class="fa fa-heart"></i></a></span>
+                        <span class="left">A$399 <span class="discount">A$499</span></span>
+                        <span class="right"><a href="#">More</a></span>
                     </div>
 
                 </div>
@@ -336,8 +330,8 @@
             <div class="card">
 
                 <!--Card image-->
-                <div class="view overlay hm-white-slight z-depth-1">
-                    <img src="http://www.trailertek.com/media/catalog/category/ATV-_-QUAD-TRAILERS.jpg" class="img-fluid" alt="">
+                <div class="view overlay hm-white-slight z-depth-0">
+                    <img src="https://www.handyimports.com.au/media/catalog/product/cache/1/image/600x600/17f82f742ffe127f42dca9de82fb58b1/i/m/image_27261.jpg" class="img-fluid" alt="">
                     <a>
                         <div class="mask waves-effect waves-light"></div>
                     </a>
@@ -347,17 +341,13 @@
                 <!--Card content-->
                 <div class="card-block text-center">
                     <!--Category & Title-->
-                    <a href="" class="text-muted"><h5>Accessories</h5></a>
-                    <h4 class="card-title"><strong><a href="">Bracelets</a></strong></h4>
-
-                    <!--Description-->
-                    <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam.
-                    </p>
+                    <a href="" class="text-muted"><h5>Canopies</h5></a>
+                    <h4 class="card-title"><strong><a href="">Single Cab</a></strong></h4>
 
                     <!--Card footer-->
                     <div class="card-footer">
-                        <span class="left">39$ <span class="discount">99$</span></span>
-                        <span class="right"><a class="active" data-toggle="tooltip" data-placement="top" title="Added to Wishlist"><i class="fa fa-heart"></i></a></span>
+                        <span class="left">A$259 <span class="discount">A$299</span></span>
+                        <span class="right"><a href="#">More</a></span>
                     </div>
 
                 </div>
@@ -376,8 +366,8 @@
             <div class="card">
 
                 <!--Card image-->
-                <div class="view overlay hm-white-slight z-depth-1">
-                    <img src="http://www.trailertek.com/media/catalog/category/ATV-_-QUAD-TRAILERS.jpg" class="img-fluid" alt="">
+                <div class="view overlay hm-white-slight z-depth-0">
+                    <img src="https://www.mifitness.co.za/wp-content/uploads/2016/11/aluminium-lock-jaw-collars-500x500.jpg" class="img-fluid" alt="">
                     <a>
                         <div class="mask waves-effect waves-light"></div>
                     </a>
@@ -387,17 +377,15 @@
                 <!--Card content-->
                 <div class="card-block text-center">
                     <!--Category & Title-->
-                    <a href="" class="text-muted"><h5>Shoes</h5></a>
-                    <h4 class="card-title"><strong><a href="">Black boots</a></strong></h4>
+                    <a href="" class="text-muted"><h5>Trailers</h5></a>
+                    <h4 class="card-title"><strong><a href="">Box Trailer</a></strong></h4>
 
                     <!--Description-->
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing minima veniam elit. Nam incidunt eius est voluptatibus.
-                    </p>
 
                     <!--Card footer-->
                     <div class="card-footer">
-                        <span class="left">79$ <span class="discount">299$</span></span>
-                        <span class="right"><a class="" data-toggle="tooltip" data-placement="top" title="Add to Wishlist"><i class="fa fa-heart"></i></a></span>
+                        <span class="left">A$2399 <span class="discount">A$2999</span></span>
+                        <span class="right"><a href="#">More</a></span>
                     </div>
 
                 </div>
@@ -416,7 +404,7 @@
             <div class="card">
 
                 <!--Card image-->
-                <div class="view overlay hm-white-slight z-depth-1">
+                <div class="view overlay hm-white-slight z-depth-0">
                     <img src="http://www.trailertek.com/media/catalog/category/ATV-_-QUAD-TRAILERS.jpg" class="img-fluid" alt="">
                     <a>
                         <div class="mask waves-effect waves-light"></div>
@@ -428,16 +416,12 @@
                 <div class="card-block text-center">
                     <!--Category & Title-->
                     <a href="" class="text-muted"><h5>Accessories</h5></a>
-                    <h4 class="card-title"><strong><a href="">Silver jewelry</a></strong></h4>
-
-                    <!--Description-->
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing minima veniam elit. Nam incidunt eius est voluptatibus.
-                    </p>
+                    <h4 class="card-title"><strong><a href="">Wheels</a></strong></h4>
 
                     <!--Card footer-->
                     <div class="card-footer">
-                        <span class="left">79$ <span class="discount">299$</span></span>
-                        <span class="right"><a class="active" data-toggle="tooltip" data-placement="top" title="Added to Wishlist"><i class="fa fa-heart"></i></a></span>
+                        <span class="left">A79$ <span class="discount">A$99</span></span>
+                        <span class="right"><a href="#">More</a></span>
                     </div>
 
                 </div>
@@ -454,13 +438,14 @@
     </div>
 </section>
 <!--/Section: Products v.3-->
+<hr class="between-sections">
 <!--Section: Team v.1-->
 <section class="section team-section">
 
     <div class="container">
 
     <!--Section heading-->
-    <h1 class="section-heading">Our amazing team</h1>
+    <h1 class="section-heading font-weight-bold">Our Amazing Team</h1>
     <!--Section description-->
     <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam eum porro a pariatur accusamus veniam.</p>
 
@@ -554,72 +539,21 @@
 </section>
 <!--/Section: Team v.1-->
 
-<div class="view hm-black-strong">
-    <div class="full-bg-img flex-center">
-        <div class="container">
-            <div class="row" id="home">
+<!--Form without header-->
 
-                <!--First column-->
-                <div class="col-lg-6">
-                    <div class="description">
-                        <h2 class="h2-responsive wow fadeInLeft">Sign up right now! </h2>
-                        <hr class="hr-dark wow fadeInLeft">
-                        <p class="wow fadeInLeft" data-wow-delay="0.4s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi fuga nesciunt dolorum nulla magnam veniam sapiente, fugiat! Commodi sequi non animi ea dolor molestiae, quisquam iste, maiores. Nulla.</p>
-                        <br>
-                        <a class="btn btn-primary btn-lg wow fadeInLeft" data-wow-delay="0.7s">Learn more</a>
-                    </div>
-                </div>
-                <!--/.First column-->
-
-                <!--Second column-->
-                <div class="col-lg-6">
-                    <!--Form-->
-                    <div class="card wow fadeInRight">
-                        <div class="card-block">
-                            <!--Header-->
-                            <div class="text-center">
-                                <h3><i class="fa fa-user"></i> Register with:</h3>
-                                <a class="btn-floating btn-fb btn-small"><i class="fa fa-facebook"></i></a>
-                                <a class="btn-floating btn-tw btn-small"><i class="fa fa-twitter"></i></a>
-                                <a class="btn-floating btn-gplus btn-small"><i class="fa fa-google-plus"></i></a>
-                                <a class="btn-floating btn-li btn-small"><i class="fa fa-linkedin"></i></a>
-                                <a class="btn-floating btn-git btn-small"><i class="fa fa-github"></i></a>
-                                <hr>
-                                <h3>or:</h3>
-                            </div>
-
-                            <!--Body-->
-                            <div class="md-form">
-                                <i class="fa fa-envelope prefix"></i>
-                                <input type="text" id="form2" class="form-control">
-                                <label for="form2">Your email</label>
-                            </div>
-
-                            <div class="md-form">
-                                <i class="fa fa-lock prefix"></i>
-                                <input type="password" id="form4" class="form-control">
-                                <label for="form4">Your password</label>
-                            </div>
-
-                            <div class="text-center">
-                                <button class="btn btn-primary btn-lg">Sign up</button>
-                                <hr>
-                                <fieldset class="form-group">
-                                    <input type="checkbox" id="checkbox1">
-                                    <label for="checkbox1">Subscribe me to the newsletter</label>
-                                </fieldset>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!--/.Form-->
-                </div>
-                <!--/Second column-->
-            </div>
+<section id="contact-mw" class="section">
+    <div class="container">
+    <div class="row">
+        <div class="col-8">
+        <h1 class="white-text">Do You Need Any Help?</h1>
+        </div>
+        <div class="col-4 right">
+        <a target="_blank" href="https://mdbootstrap.com/getting-started/" class="btn btn- btn-rounded">Contact Us</a>
+        <a target="_blank" href="https://mdbootstrap.com/material-design-for-bootstrap/" class="btn btn-default btn-rounded">Learn more</a>
         </div>
     </div>
-</div>
-
+    </div>
+</section>
 <!--/.Mask-->
 
 <!--/Section: Features v.3-->
@@ -686,18 +620,10 @@
     </div>
     <!--/.Footer Links-->
 
-    <hr>
+
 
     <!--Call to action-->
-    <div class="call-to-action">
-        <h4>MW TOOLBOX QLD</h4>
-        <ul>
-            <li>
-                <h5>Get Started</h5></li>
-            <li><a target="_blank" href="https://mdbootstrap.com/getting-started/" class="btn btn-danger">Contact Us</a></li>
-            <li><a target="_blank" href="https://mdbootstrap.com/material-design-for-bootstrap/" class="btn btn-default">Learn more</a></li>
-        </ul>
-    </div>
+
     <!--/.Call to action-->
 
     <!--Copyright-->
