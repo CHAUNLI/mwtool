@@ -126,7 +126,9 @@ body,
     font-size: 72px;
 }
 
-
+#product_section_style,#product_section_style1{
+    margin-top: 50px;
+}
 
 #contact-mw{
     background-color: #4d51aa;

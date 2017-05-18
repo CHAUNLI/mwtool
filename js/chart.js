@@ -261,7 +261,7 @@ AmCharts.makeChart("map",{
         "right": 38,
         "bottom": 30,
         "minZoomLevel": 0.25,
-        "gridHeight": 100,
+        "gridHeight": 50,
         "gridAlpha": 0.1,
         "gridBackgroundAlpha": 0,
         "gridColor": "#FFFFFF",

@@ -1,12 +1,14 @@
-
-var xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function() {
+/**
+ * Created by MW Toolbox on 18/05/2017.
+ */
+var xmlhttp1 = new XMLHttpRequest();
+xmlhttp1.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-        var res = JSON.parse(xmlhttp.responseText);
+        var res = JSON.parse(xmlhttp1.responseText);
         var row = rowCreate();
         for (var i = 0; i < res.length; i++) {
             var counter = res[i];
-           window.onload= productCardCreate(row,counter.product_series,counter.product_title,counter.start_price);
+            window.onload= productCardCreate(row,counter.product_series,counter.product_title,counter.start_price);
             //console.log(counter.product_series);
             //document.write(counter.product_title+" -> "+counter.product_series);
 
@@ -14,9 +16,9 @@ xmlhttp.onreadystatechange = function() {
 
     }
 };
-xmlhttp.open('POST', "http://localhost/mwtool/testphpapp/myphp/products/series", true);
-xmlhttp.setRequestHeader("Accept", "application/json");
-xmlhttp.send();
+xmlhttp1.open('POST', "http://localhost/mwtool/testphpapp/myphp/products/series", true);
+xmlhttp1.setRequestHeader("Accept", "application/json");
+xmlhttp1.send();
 
 function creationRow (lenths){
 
@@ -27,8 +29,8 @@ function creationRow (lenths){
 
 
 function productCardCreate(row,htitle,series,price) {
-   // var secCreate = sectionCreate();
-   // var row = rowCreate();
+    // var secCreate = sectionCreate();
+    // var row = rowCreate();
     var column = columnCreate();
     var card = cardCreate();
     var cardImage = cardImageCreate();
@@ -40,7 +42,7 @@ function productCardCreate(row,htitle,series,price) {
     var pTag= pCreate();
     var footer = cardFooterCreate(price);
 
-  //  secCreate.appendChild(row);
+    //  secCreate.appendChild(row);
 
 
     row.appendChild(column);
@@ -68,7 +70,7 @@ function sectionCreate() {
 function rowCreate() {
     var rowDiv = document.createElement('div');
     rowDiv.className = "row";
-    var rowsec = document.getElementById('unique_sec').appendChild(rowDiv);
+    var rowsec = document.getElementById('unique_sec1123').appendChild(rowDiv);
     return rowsec;
 }
 
@@ -150,55 +152,3 @@ function cardFooterCreate(price){
     return divfooter;
 
 }
-/*function hello() {
-    var iDiv = document.createElement('div');
-    iDiv.id = 'block';
-    iDiv.className = 'card';
-    document.body.appendChild(iDiv);
-
-    var iiDiv = document.createElement('div');
-    iiDiv.className = 'view overlay hm-white-slight';
-
-    var s = document.getElementById('block');
-    s.appendChild(iiDiv);
-
-    var img = document.createElement('img');
-    img.className='img-fluid';
-    img.onload;
-    img.src='img/truck.jpg';
-    iiDiv.appendChild(img);
-
-
-    var a = document.createElement('a');
-    a.href='#';
-    var divMask= document.createElement('div');
-    divMask.className='mask waves-effect waves-light';
-    a.appendChild(divMask);
-
-    iiDiv.appendChild(a);
-
-
-    var divCard= document.createElement('div');
-    divMask.setAttribute('class','card-block');
-    iDiv.appendChild(divCard);
-    s.appendChild(iDiv)
-
-    var h4 =document.createElement('h4');
-    h4.setAttribute('class','card-title');
-    h4.innerHTML=" card title test ";
-    divCard.appendChild(h4);
-    var p =document.createElement('p');
-    p.setAttribute('class','card-text');
-    p.innerHTML="description";
-    divCard.appendChild(p);
-    var button=document.createElement('a');
-    button.setAttribute('class','btn btn-primary');
-    button.setAttribute('href','#');
-    button.innerHTML="button";
-    divCard.appendChild(button);
-};*/
-
-
-
-
-
