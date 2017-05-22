@@ -1,17 +1,18 @@
 /**
- * Created by MW Toolbox on 18/05/2017.
+ * Created by MW Toolbox on 19/05/2017.
  */
+var xmlhttpunder = new XMLHttpRequest();
+xmlhttpunder.open('POST', "http://localhost/mwtool/testphpapp/myphp/products/series_under", true);
+xmlhttpunder.setRequestHeader("Accept", "application/json");
+xmlhttpunder.send();
 
-
-var xmlhttp1 = new XMLHttpRequest();
-xmlhttp1.onreadystatechange = function() {
+xmlhttpunder.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-        var res = JSON.parse(xmlhttp1.responseText);
-
-        var row2= row2Create();
-        for (var i = 0; i < res.length; i++) {
-            var counter = res[i];
-            window.onload= productCardCreate(row2,counter.product_series,counter.product_title,counter.start_price,counter.product_series_id);
+        var ressUnder = JSON.parse(xmlhttpunder.responseText);
+        var rowUnder= rowUnderCreate();
+        for (var i = 0; i < ressUnder.length; i++) {
+            var countersUnder = ressUnder[i];
+            window.onload= productCardCreate(rowUnder,countersUnder.product_series,countersUnder.product_title,countersUnder.start_price,countersUnder.product_series_id);
             //console.log(counter.product_series);
             //document.write(counter.product_title+" -> "+counter.product_series);
 
@@ -19,9 +20,6 @@ xmlhttp1.onreadystatechange = function() {
 
     }
 };
-xmlhttp1.open('POST', "http://localhost/mwtool/testphpapp/myphp/products/series_top", true);
-xmlhttp1.setRequestHeader("Accept", "application/json");
-xmlhttp1.send();
 
 /*function productCardCreate(row,htitle,series,price) {
     // var secCreate = sectionCreate();
@@ -54,30 +52,16 @@ xmlhttp1.send();
 
 };*/
 
-/*function sectionCreate() {
-    var sectionDiv = document.createElement('div');
-    sectionDiv.id='sec';
-    sectionDiv.className='section';
-    document.body.appendChild(sectionDiv);
-    return sectionDiv;
-}*/
 
-function row2Create() {
+function rowUnderCreate() {
     var rowDiv = document.createElement('div');
     rowDiv.className = "row";
-    var rowsec = document.getElementById('unique_sec').appendChild(rowDiv);
+    var rowsec = document.getElementById('unique_under').appendChild(rowDiv);
     return rowsec;
 }
+
 
 /*
-function rowCreate() {
-    var rowDiv = document.createElement('div');
-    rowDiv.className = "row";
-    var rowsec = document.getElementById('unique_sec1123').appendChild(rowDiv);
-    return rowsec;
-}
-
-
 function columnCreate() {
     var columnDiv = document.createElement('div');
     columnDiv.className = "col-lg-4 col-md-12 mb-r";

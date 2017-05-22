@@ -1,17 +1,18 @@
 /**
- * Created by MW Toolbox on 18/05/2017.
+ * Created by MW Toolbox on 19/05/2017.
  */
+var xmlhttpdrawer = new XMLHttpRequest();
+xmlhttpdrawer.open('POST', "http://localhost/mwtool/testphpapp/myphp/products/series_drawers", true);
+xmlhttpdrawer.setRequestHeader("Accept", "application/json");
+xmlhttpdrawer.send();
 
-
-var xmlhttp1 = new XMLHttpRequest();
-xmlhttp1.onreadystatechange = function() {
+xmlhttpdrawer.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-        var res = JSON.parse(xmlhttp1.responseText);
-
-        var row2= row2Create();
-        for (var i = 0; i < res.length; i++) {
-            var counter = res[i];
-            window.onload= productCardCreate(row2,counter.product_series,counter.product_title,counter.start_price,counter.product_series_id);
+        var ressDrawer = JSON.parse(xmlhttpdrawer.responseText);
+        var rowDrawer= rowDrawerCreate();
+        for (var i = 0; i < ressDrawer.length; i++) {
+            var countersUnder = ressDrawer[i];
+            window.onload= productCardCreate(rowDrawer,countersUnder.product_series,countersUnder.product_title,countersUnder.start_price, countersUnder.product_series_id);
             //console.log(counter.product_series);
             //document.write(counter.product_title+" -> "+counter.product_series);
 
@@ -19,18 +20,15 @@ xmlhttp1.onreadystatechange = function() {
 
     }
 };
-xmlhttp1.open('POST', "http://localhost/mwtool/testphpapp/myphp/products/series_top", true);
-xmlhttp1.setRequestHeader("Accept", "application/json");
-xmlhttp1.send();
 
-/*function productCardCreate(row,htitle,series,price) {
+function productCardCreate(row,htitle,series,price,series_id) {
     // var secCreate = sectionCreate();
     // var row = rowCreate();
     var column = columnCreate();
     var card = cardCreate();
     var cardImage = cardImageCreate();
     var img = imgCreate();
-    var musk = muskCreate();
+    var musk = muskCreate(series_id);
     var cardContent1=cardContent();
     var htag= hTitleCreate(htitle);
     var aTag= aCreate(series);
@@ -52,28 +50,13 @@ xmlhttp1.send();
     cardContent1.appendChild(footer);
 
 
-};*/
+};
 
-/*function sectionCreate() {
-    var sectionDiv = document.createElement('div');
-    sectionDiv.id='sec';
-    sectionDiv.className='section';
-    document.body.appendChild(sectionDiv);
-    return sectionDiv;
-}*/
 
-function row2Create() {
+function rowDrawerCreate() {
     var rowDiv = document.createElement('div');
     rowDiv.className = "row";
-    var rowsec = document.getElementById('unique_sec').appendChild(rowDiv);
-    return rowsec;
-}
-
-/*
-function rowCreate() {
-    var rowDiv = document.createElement('div');
-    rowDiv.className = "row";
-    var rowsec = document.getElementById('unique_sec1123').appendChild(rowDiv);
+    var rowsec = document.getElementById('unique_drawer').appendChild(rowDiv);
     return rowsec;
 }
 
@@ -99,17 +82,22 @@ function cardImageCreate(){
 
 function imgCreate(){
     var img =document.createElement('img');
+
     img.onload;
     img.src='img/trailers.png';
-    img.onclick= 'clickEvent()';
+
     img.className='img-fluid';
     return img;
 }
 
-function muskCreate(){
+
+
+function muskCreate(series_id){
     var a=document.createElement('a');
     var mask= document.createElement('div');
     mask.className='mask waves-effect waves-light';
+    mask.id=series_id;
+    mask.setAttribute('onclick','clickEvent('+series_id+')');
     return a.appendChild(mask);
 }
 
@@ -155,4 +143,4 @@ function cardFooterCreate(price){
     divfooter.appendChild(span);
     return divfooter;
 
-}*/
+}

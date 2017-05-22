@@ -1,17 +1,18 @@
 /**
- * Created by MW Toolbox on 18/05/2017.
+ * Created by MW Toolbox on 19/05/2017.
  */
+var xmlhttpside = new XMLHttpRequest();
+xmlhttpside.open('POST', "http://localhost/mwtool/testphpapp/myphp/products/series_side", true);
+xmlhttpside.setRequestHeader("Accept", "application/json");
+xmlhttpside.send();
 
-
-var xmlhttp1 = new XMLHttpRequest();
-xmlhttp1.onreadystatechange = function() {
+xmlhttpside.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-        var res = JSON.parse(xmlhttp1.responseText);
-
-        var row2= row2Create();
-        for (var i = 0; i < res.length; i++) {
-            var counter = res[i];
-            window.onload= productCardCreate(row2,counter.product_series,counter.product_title,counter.start_price,counter.product_series_id);
+        var ress = JSON.parse(xmlhttpside.responseText);
+        var row= rowCreate();
+        for (var i = 0; i < ress.length; i++) {
+            var counters = ress[i];
+            window.onload= productCardCreate(row,counters.product_series,counters.product_title,counters.start_price,counters.product_series_id);
             //console.log(counter.product_series);
             //document.write(counter.product_title+" -> "+counter.product_series);
 
@@ -19,18 +20,15 @@ xmlhttp1.onreadystatechange = function() {
 
     }
 };
-xmlhttp1.open('POST', "http://localhost/mwtool/testphpapp/myphp/products/series_top", true);
-xmlhttp1.setRequestHeader("Accept", "application/json");
-xmlhttp1.send();
 
-/*function productCardCreate(row,htitle,series,price) {
+/*function productCardCreate(row,htitle,series,price,series_id) {
     // var secCreate = sectionCreate();
     // var row = rowCreate();
     var column = columnCreate();
     var card = cardCreate();
     var cardImage = cardImageCreate();
     var img = imgCreate();
-    var musk = muskCreate();
+    var musk = muskCreate(series_id);
     var cardContent1=cardContent();
     var htag= hTitleCreate(htitle);
     var aTag= aCreate(series);
@@ -54,22 +52,7 @@ xmlhttp1.send();
 
 };*/
 
-/*function sectionCreate() {
-    var sectionDiv = document.createElement('div');
-    sectionDiv.id='sec';
-    sectionDiv.className='section';
-    document.body.appendChild(sectionDiv);
-    return sectionDiv;
-}*/
 
-function row2Create() {
-    var rowDiv = document.createElement('div');
-    rowDiv.className = "row";
-    var rowsec = document.getElementById('unique_sec').appendChild(rowDiv);
-    return rowsec;
-}
-
-/*
 function rowCreate() {
     var rowDiv = document.createElement('div');
     rowDiv.className = "row";
@@ -78,6 +61,7 @@ function rowCreate() {
 }
 
 
+/*
 function columnCreate() {
     var columnDiv = document.createElement('div');
     columnDiv.className = "col-lg-4 col-md-12 mb-r";

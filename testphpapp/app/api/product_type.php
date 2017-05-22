@@ -60,10 +60,130 @@ $app->post('/products/series',function($request){
     }else{
         echo "error";
     }
-   /* foreach($allcalls as $key => $values){
-        echo "".$key.": ".implode(",",$values);
+    /* foreach($allcalls as $key => $values){
+         echo "".$key.": ".implode(",",$values);
+     }
+     //*/
+
+
+});
+
+$app->post('/products/series_top',function($request){
+    if ($request->hasHeader('Accept')) {
+        $test="right";
+
+        $db=new db();
+        $db = $db->connect();
+        $query ="select * from mw_series WHERE product_title = 'Top Opening' ";
+        if($result= $db->query($query)) {
+            while ($row = $result->fetch_assoc()) {
+                $data[] = $row;
+            }
+        }
+        mysqli_close($db);
+        if(isset($data)){
+            header("Content-Type: application/json;charset=utf-8");
+            echo json_encode($data);
+
+        }
+
+    }else{
+        echo "error";
     }
-    //*/
+    /* foreach($allcalls as $key => $values){
+         echo "".$key.": ".implode(",",$values);
+     }
+     //*/
+
+
+});
+
+$app->post('/products/series_side',function($request){
+    if ($request->hasHeader('Accept')) {
+        $test="right";
+
+        $db=new db();
+        $db = $db->connect();
+        $query ="select * from mw_series WHERE product_title = 'Side Opening' ";
+        if($result= $db->query($query)) {
+            while ($row = $result->fetch_assoc()) {
+                $data[] = $row;
+            }
+        }
+        mysqli_close($db);
+        if(isset($data)){
+            header("Content-Type: application/json;charset=utf-8");
+            echo json_encode($data);
+
+        }
+
+    }else{
+        echo "error";
+    }
+    /* foreach($allcalls as $key => $values){
+         echo "".$key.": ".implode(",",$values);
+     }
+     //*/
+
+
+});
+
+$app->post('/products/series_under',function($request){
+    if ($request->hasHeader('Accept')) {
+        $test="right";
+
+        $db=new db();
+        $db = $db->connect();
+        $query ="select * from mw_series WHERE product_title = 'Underbody' ";
+        if($result= $db->query($query)) {
+            while ($row = $result->fetch_assoc()) {
+                $data[] = $row;
+            }
+        }
+        mysqli_close($db);
+        if(isset($data)){
+            header("Content-Type: application/json;charset=utf-8");
+            echo json_encode($data);
+
+        }
+
+    }else{
+        echo "error";
+    }
+    /* foreach($allcalls as $key => $values){
+         echo "".$key.": ".implode(",",$values);
+     }
+     //*/
+
+
+});
+
+$app->post('/products/series_drawers',function($request){
+    if ($request->hasHeader('Accept')) {
+        $test="right";
+
+        $db=new db();
+        $db = $db->connect();
+        $query ="select * from mw_series WHERE product_title = 'Underbody Slide Drawers' ";
+        if($result= $db->query($query)) {
+            while ($row = $result->fetch_assoc()) {
+                $data[] = $row;
+            }
+        }
+        mysqli_close($db);
+        if(isset($data)){
+            header("Content-Type: application/json;charset=utf-8");
+            echo json_encode($data);
+
+        }
+
+    }else{
+        echo "error";
+    }
+    /* foreach($allcalls as $key => $values){
+         echo "".$key.": ".implode(",",$values);
+     }
+     //*/
 
 
 });
