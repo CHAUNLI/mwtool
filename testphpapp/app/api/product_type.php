@@ -164,7 +164,7 @@ $app->post('/products/series_drawers',function($request){
 
         $db=new db();
         $db = $db->connect();
-        $query ="select * from mw_series WHERE product_title = 'Underbody Slide Drawers' ";
+        $query ="select * from mw_series WHERE product_title = 'Site Box' ";
         if($result= $db->query($query)) {
             while ($row = $result->fetch_assoc()) {
                 $data[] = $row;
@@ -185,5 +185,80 @@ $app->post('/products/series_drawers',function($request){
      }
      //*/
 
+
+});
+
+$app->post('/products/series_tray',function($request){
+    if ($request->hasHeader('Accept')) {
+        $test="right";
+
+        $db=new db();
+        $db = $db->connect();
+        $query ="select * from mw_series WHERE product_title = 'Sliding Tray' ";
+        if($result= $db->query($query)) {
+            while ($row = $result->fetch_assoc()) {
+                $data[] = $row;
+            }
+        }
+        mysqli_close($db);
+        if(isset($data)){
+            header("Content-Type: application/json;charset=utf-8");
+            echo json_encode($data);
+
+        }
+
+    }else{
+        echo "error";
+    }
+    /* foreach($allcalls as $key => $values){
+         echo "".$key.": ".implode(",",$values);
+     }
+     //*/
+
+
+});
+
+$app->post('/products/series_coated',function($request){
+    if ($request->hasHeader('Accept')) {
+        $test="right";
+
+        $db=new db();
+        $db = $db->connect();
+        $query ="select * from mw_series WHERE product_title = 'Power Coated' ";
+        if($result= $db->query($query)) {
+            while ($row = $result->fetch_assoc()) {
+                $data[] = $row;
+            }
+        }
+        mysqli_close($db);
+        if(isset($data)){
+            header("Content-Type: application/json;charset=utf-8");
+            echo json_encode($data);
+
+        }
+
+    }else{
+        echo "error";
+    }
+    /* foreach($allcalls as $key => $values){
+         echo "".$key.": ".implode(",",$values);
+     }
+     //*/
+
+
+});
+
+
+$app->get('/products_name/{id}', function($request){
+    $db=new db();
+    $db = $db->connect();
+    $id=$request->getAttribute('id');
+    $query ="select product_series from mw_series where id=$id";
+    $result= $db->query($query);
+    $data=$result->fetch_assoc();
+    header("Content-Type: application/json;charset=utf-8");
+    echo $data['product_series'];
+
+    mysqli_close($db);
 
 });
