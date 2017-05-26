@@ -272,14 +272,14 @@ $app->get('/products_features/{id}', function($request){
     $result= $db->query($query);
 
     if($result= $db->query($query)) {
-        while ($row = $result->fetch_assoc()) {
-            $data[] = $row;
-        }
+       $row = $result->fetch_assoc();
+            $data = $row;
+
     }
 
     if(isset($data)){
         header("Content-Type: application/json;charset=utf-8");
-        echo json_encode($data);
+        echo json_encode($data,JSON_FORCE_OBJECT);
 
     }else{
         echo "error";
