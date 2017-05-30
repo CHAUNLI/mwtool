@@ -288,3 +288,29 @@ $app->get('/products_features/{id}', function($request){
     mysqli_close($db);
 
 });
+
+$app->get('/products_codes/{id}', function($request){
+    $db=new db();
+    $db = $db->connect();
+    $id=$request->getAttribute('id');
+    $query ="select * from mw_product_code where series_id=$id";
+    $result= $db->query($query);
+
+    if($result= $db->query($query)) {
+        while ($row = $result->fetch_assoc()) {
+            $data[] = $row;
+        }
+
+    }
+
+    if(isset($data)){
+        header("Content-Type: application/json;charset=utf-8");
+        echo json_encode($data);
+
+    }else{
+        echo "error";
+    }
+
+    mysqli_close($db);
+
+});
