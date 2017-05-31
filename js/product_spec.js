@@ -23,6 +23,7 @@ var id=getParameterByName("vt", getCurrentUrl());
 if(id){
     xmlHttpCall(id);
     xmlHttpFeaturesCall(id);
+    xmlCodeHttpCall(id);
 }
 
 
@@ -42,6 +43,67 @@ function xmlHttpCall(ids){
         }
     };
 
+}
+
+
+function xmlCodeHttpCall(ids){
+    var specific_product= new XMLHttpRequest();
+    specific_product.open('GET', "http://localhost/mwtool/testphpapp/myphp/products_codes/"+ids, true);
+    specific_product.setRequestHeader("Accept", "application/json");
+    specific_product.send();
+
+
+    specific_product.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var res =JSON.parse(specific_product.responseText);
+            for (var i = 0; i < res.length; i++){
+                var single_code=res[i];
+                var tr=trCreate();
+                window.onload= productCodeInput(tr,single_code.product_code,single_code.length,
+                                           single_code.width,single_code.height,single_code.thickness,
+                                           single_code.weight,single_code.price);
+            }
+
+
+        }
+    };
+
+}
+
+function productCodeInput(tr,product_code,length,width,height,thickness,weight,price){
+
+    var tdCode=tdCreate(product_code);
+    var tdLen=tdCreate(length);
+    var tdWid=tdCreate(width);
+    var tdHei=tdCreate(height);
+    var tdLock=tdCreate(thickness);
+    var tdWei=tdCreate(weight);
+    var tdPrice=tdCreate(price);
+
+    tr.appendChild(tdCode);
+    tr.appendChild(tdLen);
+    tr.appendChild(tdWid);
+    tr.appendChild(tdHei);
+    tr.appendChild(tdLock);
+    tr.appendChild(tdWei);
+    tr.appendChild(tdPrice);
+
+
+
+}
+
+function tdCreate(dataTable){
+    var tdCreate =document.createElement("td");
+    tdCreate.innerHTML=dataTable;
+    return tdCreate;
+}
+
+
+function trCreate(){
+    var trCreate =document.createElement("tr");
+    var tbody =document.getElementById('pro_code').appendChild(trCreate);
+
+    return tbody;
 }
 
 function xmlHttpFeaturesCall(ids){
