@@ -5,7 +5,19 @@
  * Date: 11/05/2017
  * Time: 2:42 PM
  */
+
+
+$app->get('/hello/{name}', function (Request $request, Response $response) {
+
+    $name = $request->getAttribute('name');
+    $response->getBody()->write("Hello, $name");
+    return $response;
+});
+
+
+
 $app->get('/products',function(){
+
     $db=new db();
     $db = $db->connect();
     $queryy = "select * from mw_products order by id";
@@ -18,6 +30,7 @@ $app->get('/products',function(){
     if(isset($data)){
         header("Content-Type: application/json;charset=utf-8");
         echo json_encode($data);
+        //echo "good";
 
     }
 
@@ -308,7 +321,7 @@ $app->get('/products_codes/{id}', function($request){
         echo json_encode($data);
 
     }else{
-        echo "error";
+        echo "error123123123";
     }
 
     mysqli_close($db);

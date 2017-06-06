@@ -101,6 +101,12 @@ body,
     background-size: cover;
 }
 
+
+@media screen and (max-width: 650px){#shops,#shops_hr{display:none;}}
+
+
+
+
 @media (max-width: 768px) {
     .full-bg-img,
     .view {

@@ -12,15 +12,12 @@ require '../vendor/autoload.php';
 require '../app/api/db.php';
 
 
-$app = new \Slim\App;
+$app = new \Slim\App();
 
 require_once('../app/api/product_type.php');
-/*$app->get('/hello/{name}', function (Request $request, Response $response) {
-    $name = $request->getAttribute('name');
-    $response->getBody()->write("Hello, $name");
 
-    return $response;
-});*/
+
 $app->run();
+
 
 ?>

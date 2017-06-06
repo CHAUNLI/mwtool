@@ -37,17 +37,21 @@
                 <li class="nav-item active">
                     <a class="nav-link">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item btn-group">
-                    <a class="nav-link dropdown-toggle"  id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <a href="product_display.html" class="dropdown-item">Toolbox</a>
-                        <a class="dropdown-item">Trailer</a>
-                        <a class="dropdown-item">Canopy</a>
-                        <a class="dropdown-item">Accessory</a>
-                    </div>
+
+                <li class="nav-item" >
+                    <a href="product_display.html" class="nav-link">Toolbox</a>
                 </li>
                 <li class="nav-item" >
-                    <a href="js_three.html" class="nav-link">Custom Build</a>
+                    <a href="js_three.html" class="nav-link">Trailer</a>
+                </li>
+                <li class="nav-item" >
+                    <a href="js_three.html" class="nav-link">Canopy</a>
+                </li>
+                <li class="nav-item" >
+                    <a href="js_three.html" class="nav-link">Accessory</a>
+                </li>
+                <li class="nav-item" >
+                    <a href="custom_category.html" class="nav-link">Custom Build</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link">About Us</a>
@@ -492,18 +496,15 @@
     <!--/First row-->
 </section>
 <!--/Projects section v.4-->
-<hr class="between-sections">
+<hr id="shops_hr" class="between-sections">
 
 <!--Section: Products v.3-->
-<section class="section">
+<section id="shops" class="section">
     <div id="ammap-section" class="container">
         <h1 class="section-heading font-weight-bold">28 Shops In Nationwide</h1>
         <p class="section-description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <div id="map" style="width: 100%; height: 800px;" ></div>
     </div>
-
-
-
 </section>
 <!--/Section: Products v.3-->
 <hr class="between-sections">
@@ -612,11 +613,13 @@
 <section id="contact-mw" class="section">
     <div class="container">
     <div class="row">
-        <div class="col-8">
+        <div class="col-lg-8 col-md-12">
         <h1 class="white-text">Do You Need Any Help?</h1>
         </div>
-        <div class="col-4 right">
+        <div class="col-lg-2 col-md-12 flex-center">
         <a target="_blank" href="contact_page.html" class="btn btn- btn-rounded">Contact Us</a>
+        </div>
+        <div class="col-lg-2 col-md-12  flex-center">
         <a target="_blank" href="https://mdbootstrap.com/material-design-for-bootstrap/" class="btn btn-default btn-rounded">Learn more</a>
         </div>
     </div>

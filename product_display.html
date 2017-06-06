@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Title</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
@@ -14,13 +16,13 @@
 
 </head>
 <body>
-<nav class="navbar fixed-top navbar-toggleable-md navbar-dark scrolling-navbar mdb-color darken-1">
+<nav class="navbar navbar-toggleable-md navbar-dark scrolling-navbar mdb-color darken-1 fixed-top">
     <div class="container">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand" href="#">
-            <img src="img/logogreenmap.png" class="d-inline-block align-top" alt="MDBootstrap">
+            <img src="img/logogreenmap.png" class="d-inline-block align-top z-depth-0" alt="MDBootstrap">
         </a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mr-auto">
@@ -42,16 +44,8 @@
                 <li class="nav-item">
                     <a href="index.html?testvalue=1" class="nav-link">Pricing</a>
                 </li>
-                <li class="nav-item btn-group">
-                    <a class="nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <a class="dropdown-item">Action</a>
-                        <a class="dropdown-item">Another action</a>
-                        <a class="dropdown-item">Something else here</a>
-                    </div>
-                </li>
             </ul>
-            <ul class="navbar-nav nav-flex-icons">
+            <ul class="navbar-nav  ml-auto nav-flex-icons">
                 <li class="nav-item">
                     <a class="nav-link"><i class="fa fa-facebook"></i></a>
                 </li>
@@ -65,7 +59,68 @@
         </div>
     </div>
 </nav>
+<nav class="navbar navbar-inverse fixed-bottom navbar-toggleable-md navbar-dark green" >
+    <div class="container">
+        <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseEx3" aria-controls="collapseEx3" aria-expanded="false" aria-label="Toggle navigation">
+            Shop Location
+        </button>
+        <div class="collapse navbar-collapse" id="collapseEx3">
 
+            <div class="row">
+                <div class="col-md-2">
+                    <ul id="detail_info">
+                        <li style="font-size:10px" class="white-text font-weight-bold"> Coopers Plains</li>
+                        <li  style="font-size:10px" class="white-text"> Tel:07 3875 1066</li>
+                        <li  style="font-size:10px" class="white-text"> Add:754 Beaudesert Road, QLD</li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <ul>
+                        <li  style="font-size:10px" class="white-text font-weight-bold" > Albion</li>
+                        <li  style="font-size:10px" class="white-text"> Tel:07 3262 4577</li>
+                        <li  style="font-size:10px" class="white-text"> Add:174 Sandgate Road, QLD</li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <ul>
+                        <li  style="font-size:10px" class="white-text font-weight-bold"> Virginia</li>
+                        <li  style="font-size:10px" class="white-text"> Tel:07 3865 3300</li>
+                        <li  style="font-size:10px" class="white-text"> Add:2/2023 Sandgate Road, QLD</li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <ul>
+                        <li  style="font-size:10px" class="white-text font-weight-bold"> Gold Coast</li>
+                        <li  style="font-size:10px" class="white-text"> Tel:07 5537 7004</li>
+                        <li  style="font-size:10px" class="white-text"> Add:223 Brisbane Road, Labrador</li>
+                    </ul>
+
+
+                </div>
+                <div class="col-md-2">
+                    <ul>
+                        <li  style="font-size:10px" class="white-text font-weight-bold"> Townsville</li>
+                        <li  style="font-size:10px" class="white-text"> Tel:07 4725 5280</li>
+                        <li  style="font-size:10px" class="white-text"> Add:1/298 Bayswater Road, Garbutt</li>
+                    </ul>
+
+
+                </div>
+                <div class="col-md-2">
+                    <ul>
+                        <li  style="font-size:10px" class="white-text font-weight-bold"> Rockhampton</li>
+                        <li  style="font-size:10px" class="white-text"> Tel:07 4928 1977</li>
+                        <li  style="font-size:10px" class="white-text"> Add:397 Park Avenue, QLD</li>
+                    </ul>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</nav>
 
 <section id= "product_section_style" class="section">
     <h1 id= "product_section_styleh" class="section-heading font-weight-bold left">Top Opening</h1>
@@ -120,16 +175,17 @@
 </section>
 
 
-<footer class="page-footer center-on-small-only">
+<<footer class="page-footer center-on-small-only">
 
     <!--Footer Links-->
     <div class="container">
         <div class="row">
 
             <!--First column-->
-            <div class="col-md-3 offset-md-1">
+            <div class="col-md-3">
                 <h5 class="title">ABOUT MW TOOLBOX</h5>
-                <p>Best in brisbane</p>
+                <p>Australian Made For Australian Tradesman, Corporate Or Family. Tough And Secure!
+                    Huge Range In Stock · Flexible Custom Builds · 100K Products Sold Yearly · 15+ Years Experience</p>
 
                 <p>MW 1999</p>
             </div>
@@ -138,13 +194,13 @@
             <hr class="hidden-md-up">
 
             <!--Second column-->
-            <div class="col-md-2 offset-md-1">
-                <h5 class="title">First column</h5>
+            <div class="col-md-2">
+                <h5 class="title">Our Business</h5>
                 <ul>
-                    <li><a href="#!">Link 1</a></li>
-                    <li><a href="#!">Link 2</a></li>
-                    <li><a href="#!">Link 3</a></li>
-                    <li><a href="#!">Link 4</a></li>
+                    <li><a href="#!">Toolboxes</a></li>
+                    <li><a href="#!">Trailer</a></li>
+                    <li><a href="#!">Canopies</a></li>
+                    <li><a href="#!">Accessories</a></li>
                 </ul>
             </div>
             <!--/.Second column-->
@@ -167,7 +223,21 @@
 
             <!--Fourth column-->
             <div class="col-md-2">
-                <h5 class="title">Third column</h5>
+                <h5 class="title">Navigation</h5>
+                <ul>
+                    <li><a href="#!">Home</a></li>
+                    <li><a href="#!">Products</a></li>
+                    <li><a href="#!">Custom Build</a></li>
+                    <li><a href="#!">About Us</a></li>
+                </ul>
+            </div>
+            <!--/.Fourth column-->
+
+            <hr class="hidden-md-up">
+
+            <!--Fourth column-->
+            <div class="col-md-2">
+                <h5 class="title">Visit Us</h5>
                 <ul>
                     <li><a href="#!">Link 1</a></li>
                     <li><a href="#!">Link 2</a></li>
@@ -175,24 +245,14 @@
                     <li><a href="#!">Link 4</a></li>
                 </ul>
             </div>
-            <!--/.Fourth column-->
-
         </div>
     </div>
     <!--/.Footer Links-->
 
-    <hr>
+
 
     <!--Call to action-->
-    <div class="call-to-action">
-        <h4>MW TOOLBOX QLD</h4>
-        <ul>
-            <li>
-                <h5>Get Started</h5></li>
-            <li><a target="_blank" href="https://mdbootstrap.com/getting-started/" class="btn btn-danger">Contact Us</a></li>
-            <li><a target="_blank" href="https://mdbootstrap.com/material-design-for-bootstrap/" class="btn btn-default">Learn more</a></li>
-        </ul>
-    </div>
+
     <!--/.Call to action-->
 
     <!--Copyright-->
