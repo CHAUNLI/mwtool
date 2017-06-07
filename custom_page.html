@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Title</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
@@ -9,8 +11,9 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="css/mdb.min.css" rel="stylesheet">
-    <!-- Your custom styles (optional) -->
-    <link href="css/style.css" rel="stylesheet">
+
+    <link href="css/custom_mobile_page.css" rel="stylesheet">
+
 </head>
 <body>
 
@@ -150,17 +153,87 @@
     </div>
 </div>
 </div>-->
+<nav class="navbar navbar-inverse fixed-bottom navbar-toggleable-md navbar-dark green" >
+    <div class="container">
+        <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseEx3" aria-controls="collapseEx3" aria-expanded="false" aria-label="Toggle navigation">
+            Shop Location
+        </button>
+        <div class="collapse navbar-collapse" id="collapseEx3">
+
+            <div class="row">
+                <div class="col-md-2">
+                    <ul id="detail_info">
+                        <li style="font-size:10px" class="white-text font-weight-bold"> Coopers Plains</li>
+                        <li  style="font-size:10px" class="white-text"> Tel:07 3875 1066</li>
+                        <li  style="font-size:10px" class="white-text"> Add:754 Beaudesert Road, QLD</li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <ul>
+                        <li  style="font-size:10px" class="white-text font-weight-bold" > Albion</li>
+                        <li  style="font-size:10px" class="white-text"> Tel:07 3262 4577</li>
+                        <li  style="font-size:10px" class="white-text"> Add:174 Sandgate Road, QLD</li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <ul>
+                        <li  style="font-size:10px" class="white-text font-weight-bold"> Virginia</li>
+                        <li  style="font-size:10px" class="white-text"> Tel:07 3865 3300</li>
+                        <li  style="font-size:10px" class="white-text"> Add:2/2023 Sandgate Road, QLD</li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <ul>
+                        <li  style="font-size:10px" class="white-text font-weight-bold"> Gold Coast</li>
+                        <li  style="font-size:10px" class="white-text"> Tel:07 5537 7004</li>
+                        <li  style="font-size:10px" class="white-text"> Add:223 Brisbane Road, Labrador</li>
+                    </ul>
 
 
+                </div>
+                <div class="col-md-2">
+                    <ul>
+                        <li  style="font-size:10px" class="white-text font-weight-bold"> Townsville</li>
+                        <li  style="font-size:10px" class="white-text"> Tel:07 4725 5280</li>
+                        <li  style="font-size:10px" class="white-text"> Add:1/298 Bayswater Road, Garbutt</li>
+                    </ul>
 
-<div class="section">
+
+                </div>
+                <div class="col-md-2">
+                    <ul>
+                        <li  style="font-size:10px" class="white-text font-weight-bold"> Rockhampton</li>
+                        <li  style="font-size:10px" class="white-text"> Tel:07 4928 1977</li>
+                        <li  style="font-size:10px" class="white-text"> Add:397 Park Avenue, QLD</li>
+                    </ul>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</nav>
+
+<div id="d3_mobile" class="section">
+    <h1 class="section-heading">Custom Your Model</h1>
+    <div class="container">
+        <div class="row">
+          <div  class="col-md-12">
+                <img src="img/ute_b_pic.png" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="frame_3d" class="section">
+    <h1 class="section-heading">Custom Your Model</h1>
     <div class="container">
         <div class="card">
-
-
-
-            <!--     <iframe src="https://player.vimeo.com/video/214092083"  width="100%" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->
-            <iframe src="https://3dwarehouse.sketchup.com/embed.html?mid=c92f6182-ceb6-4d9a-94c7-c04d650dac4a&width=580&height=326" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="100%" height="326" allowfullscreen></iframe>
+          <!--     <iframe src="https://player.vimeo.com/video/214092083"  width="100%" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->
+            <iframe src="https://3dwarehouse.sketchup.com/embed.html?mid=41e3aa04-f53f-4811-be21-88bf1253aa8a" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="100%" height="366" allowfullscreen></iframe>
 
         </div>
     </div>
@@ -174,10 +247,10 @@
     <div class="col-md-12">
 
         <!-- Stepers Wrapper -->
-        <ul class="stepper stepper-horizontal">
+        <ul class="stepper stepper-horizontal setup-panel">
 
             <!-- First Step -->
-            <li class="completed">
+            <li class="active">
                 <a href="#step-1">
                     <span class="circle">1</span>
                     <span class="label">First step</span>
@@ -185,7 +258,7 @@
             </li>
 
             <!-- Second Step -->
-            <li class="disabled completed">
+            <li class="disabled">
                 <a href="#step-2">
                     <span class="circle">2</span>
                     <span class="label">Second step</span>
@@ -193,7 +266,7 @@
             </li>
 
             <!-- Third Step -->
-            <li class="disabled completed">
+            <li class="disabled">
                 <a href="#step-3">
                     <span class="circle">3</span>
                     <span class="label">Third step</span>
@@ -207,22 +280,25 @@
         </div>
 
     </div>
-    <div class="row">
+
+        <div class="row setup-content" id="step-1">
             <div class="card-block col-12">
                 <div class="row">
 
                     <!--First column-->
-                    <div class="col-md-4">
-                        <img class="img-fluid" src="img/rec_b.png" alt="Card image cap">
+                    <div class="col-lg-4 col-md-12">
+
+                        <img class="img-fluid" src="img/top_ute_b.png" alt="Card image cap">
                         <div class="md-form">
-                            <input type="text" id="form41" class="form-control">
-                            <label for="form41" class="">Width</label>
+                             <input type="text" id="form41" class="form-control">
+                             <label for="form41" class="">Width</label>
                         </div>
+
                     </div>
 
                     <!--Second column-->
-                    <div class="col-md-4">
-                        <img class="img-fluid" src="img/rec_b_left.png" alt="Card image cap">
+                    <div class="col-lg-4 col-md-12">
+                        <img class="img-fluid" src="img/13213.png" alt="Card image cap">
                         <div class="md-form">
                             <input type="text" id="form51" class="form-control">
                             <label for="form51" class="">Height</label>
@@ -230,8 +306,8 @@
                     </div>
 
                     <!--Third column-->
-                    <div class="col-md-4">
-                        <img class="img-fluid" src="img/rec_b_top.png" alt="Card image cap">
+                    <div class="col-lg-4 col-md-12">
+                        <img class="img-fluid" src="img/left_ute_b.png" alt="Card image cap">
                         <div class="md-form">
                             <input type="text" id="form61" class="form-control">
                             <label for="form61" class="">Length</label>
@@ -240,11 +316,83 @@
 
                 </div>
 
-                <button class="btn rounded "> Previous</button>
-                <button class="btn rounded right"> Next</button>
+                <button class="btn btn-primary btn-rounded"> Previous</button>
+                <button id="activate-step-2" class="btn btn-primary btn-rounded"> Next</button>
 
             </div>
         </div>
+
+
+        <div class="row setup-content" id="step-2">
+        <div class="card-block col-12">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+            <select class="mdb-select">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+            </select>
+            <label>Material Options</label>
+                </div>
+                <div class="col-lg-12 col-md-12">
+                    <select class="mdb-select">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+                    <label>G/S Options</label>
+                </div>
+                <div class="col-lg-12 col-md-12">
+                    <select class="mdb-select">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+                    <label>Lock Options</label>
+                </div>
+            </div>
+
+            <button class="btn btn-primary btn-rounded"> Previous</button>
+            <button id="activate-step-3" class="btn btn-primary btn-rounded"> Next</button>
+        </div>
+    </div>
+
+
+        <div class="row setup-content" id="step-3">
+            <div class="card-block col-12">
+                <div class="col-lg-6">
+                <div class="md-form">
+                    <input type="text" id="form2" class="form-control">
+                    <label for="form2" class="">NAME</label>
+                </div>
+                </div>
+                <div class="col-lg-6">
+                <div class="md-form">
+                    <input type="text" id="form3" class="form-control">
+                    <label for="form3" class="">PHONE</label>
+                </div>
+                </div>
+
+                    <!--First column-->
+                    <div class="col-lg-12 col-md-12">
+
+                        <div class="md-form">
+                            <textarea type="text" id="form76" class="md-textarea"></textarea>
+                            <label for="form76">Comments</label>
+                        </div>
+
+                    </div>
+
+
+                <button class="btn btn-primary btn-rounded"> Previous</button>
+                <button class="btn btn-primary btn-rounded"> Submit</button>
+            </div>
+        </div>
+
+
 </div>
 </div>
 <!-- /.Horizontal Steppers -->
@@ -350,6 +498,49 @@
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="js/mdb.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        var navListItems = $('ul.setup-panel li a'),
+            allWells = $('.setup-content');
+
+        allWells.hide();
+
+        navListItems.click(function(e)
+        {
+            e.preventDefault();
+            var $target = $($(this).attr('href')),
+                $item = $(this).closest('li');
+
+            if (!$item.hasClass('disabled')) {
+                navListItems.closest('li').removeClass('active');
+                $item.addClass('active');
+                allWells.hide();
+                $target.show();
+            }
+        });
+
+        $('ul.setup-panel li.active a').trigger('click');
+
+        $('#activate-step-2').on('click', function(e) {
+            $('ul.setup-panel li:eq(1)').removeClass('disabled');
+            $('ul.setup-panel li a[href="#step-2"]').trigger('click');
+            //$(this).remove();
+        });
+        $('#activate-step-3').on('click', function(e) {
+            $('ul.setup-panel li:eq(2)').removeClass('disabled');
+            $('ul.setup-panel li a[href="#step-3"]').trigger('click');
+            //$(this).remove();
+        });
+
+    });
+</script>
+
+<script>
+    $(document).ready(function() {
+        $('.mdb-select').material_select();
+    });
+</script>
 
 </body>
 </html>
