@@ -2,7 +2,7 @@
  * Created by MW Toolbox on 19/05/2017.
  */
 var xmlhttpunder = new XMLHttpRequest();
-xmlhttpunder.open('POST', "http://localhost/mwtool/testphpapp/myphp/products/series_under", true);
+xmlhttpunder.open('POST', "http://10.0.0.30/mwtool/testphpapp/myphp/products/series_under", true);
 xmlhttpunder.setRequestHeader("Accept", "application/json");
 xmlhttpunder.send();
 

@@ -29,7 +29,7 @@ if(id){
 
 function xmlHttpCall(ids){
     var specific_product= new XMLHttpRequest();
-    specific_product.open('GET', "http://localhost/mwtool/testphpapp/myphp/products_name/"+ids, true);
+    specific_product.open('GET', "http://10.0.0.30/mwtool/testphpapp/myphp/products_name/"+ids, true);
     specific_product.setRequestHeader("Accept", "application/json");
     specific_product.send();
 
@@ -48,7 +48,7 @@ function xmlHttpCall(ids){
 
 function xmlCodeHttpCall(ids){
     var specific_product= new XMLHttpRequest();
-    specific_product.open('GET', "http://localhost/mwtool/testphpapp/myphp/products_codes/"+ids, true);
+    specific_product.open('GET', "http://10.0.0.30/mwtool/testphpapp/myphp/products_codes/"+ids, true);
     specific_product.setRequestHeader("Accept", "application/json");
     specific_product.send();
 
@@ -108,7 +108,7 @@ function trCreate(){
 
 function xmlHttpFeaturesCall(ids){
     var specific_product= new XMLHttpRequest();
-    specific_product.open('GET', "http://localhost/mwtool/testphpapp/myphp/products_features/"+ids, true);
+    specific_product.open('GET', "http://10.0.0.30/mwtool/testphpapp/myphp/products_features/"+ids, true);
     specific_product.setRequestHeader("Accept", "application/json");
     specific_product.send();
 

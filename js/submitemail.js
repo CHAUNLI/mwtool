@@ -11,6 +11,8 @@ $(function () {
             var datapost ={
                 name:$("#call-name").val(),
                 email:$("#email").val(),
+                phone:$("#phone").val(),
+                message:$("#message").val()
 
             };
 
