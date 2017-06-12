@@ -11,9 +11,6 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="css/mdb.min.css" rel="stylesheet">
-
-    <link href="css/custom_mobile_page.css" rel="stylesheet">
-
 </head>
 <body>
 
@@ -216,192 +213,18 @@
 
 </nav>
 
-<div id="d3_mobile" class="section">
-    <h1 class="section-heading">Custom Your Model</h1>
+<section class="section">
     <div class="container">
-        <div class="row">
-          <div  class="col-md-12">
-                <img src="img/ute_b_pic.png" class="img-fluid" alt="">
-            </div>
-        </div>
-    </div>
-</div>
+        <!--Section heading-->
+        <h1 class="section-heading font-weight-bold">Our Custom Canopy</h1>
+        <!--Section sescription-->
+        <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam eum porro a pariatur accusamus veniam. Quia, minima?</p>
 
-
-<div id="frame_3d" class="section">
-    <h1 class="section-heading">Custom Your Model</h1>
-    <div class="container">
-        <div class="card">
-          <!--     <iframe src="https://player.vimeo.com/video/214092083"  width="100%" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->
-            <iframe src="https://3dwarehouse.sketchup.com/embed.html?mid=41e3aa04-f53f-4811-be21-88bf1253aa8a" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="100%" height="366" allowfullscreen></iframe>
+        <div id="cutom_canopy" class="row">
 
         </div>
     </div>
-</div>
-
-
-<div class="section">
-<!-- Horizontal Steppers -->
-    <div class="container">
-    <div class="row">
-    <div class="col-md-12">
-
-        <!-- Stepers Wrapper -->
-        <ul class="stepper stepper-horizontal setup-panel">
-
-            <!-- First Step -->
-            <li class="active">
-                <a href="#step-1">
-                    <span class="circle">1</span>
-                    <span class="label">1st step</span>
-                </a>
-            </li>
-
-            <!-- Second Step -->
-            <li class="disabled">
-                <a href="#step-2">
-                    <span class="circle">2</span>
-                    <span class="label">2nd step</span>
-                </a>
-            </li>
-
-            <!-- Third Step -->
-            <li class="disabled">
-                <a href="#step-3">
-                    <span class="circle">3</span>
-                    <span class="label">3rd step</span>
-                </a>
-            </li>
-
-        </ul>
-        <!-- /.Stepers Wrapper -->
-
-
-        </div>
-
-    </div>
-
-        <div class="row setup-content" id="step-1">
-            <div class="card-block col-12">
-                <div class="row">
-
-                    <!--First column-->
-                    <div class="col-lg-4 col-md-12">
-
-                        <img class="img-fluid" src="img/top_ute_b.png" alt="Card image cap">
-                        <div class="md-form">
-                             <input type="text" id="form41" class="form-control">
-                             <label for="form41" class="">Width</label>
-                        </div>
-
-                    </div>
-
-                    <!--Second column-->
-                    <div class="col-lg-4 col-md-12">
-                        <img class="img-fluid" src="img/13213.png" alt="Card image cap">
-                        <div class="md-form">
-                            <input type="text" id="form51" class="form-control">
-                            <label for="form51" class="">Height</label>
-                        </div>
-                    </div>
-
-                    <!--Third column-->
-                    <div class="col-lg-4 col-md-12">
-                        <img class="img-fluid" src="img/left_ute_b.png" alt="Card image cap">
-                        <div class="md-form">
-                            <input type="text" id="form61" class="form-control">
-                            <label for="form61" class="">Length</label>
-                        </div>
-                    </div>
-
-                </div>
-
-                <button class="btn btn-primary btn-rounded"> Previous</button>
-                <button id="activate-step-2" class="btn btn-primary btn-rounded"> Next</button>
-
-            </div>
-        </div>
-
-
-        <div class="row setup-content" id="step-2">
-        <div class="card-block col-12">
-            <div class="row">
-                <div class="col-lg-12 col-md-12">
-            <select class="mdb-select">
-                <option value="" disabled selected>Choose your option</option>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <option value="3">Option 3</option>
-            </select>
-            <label>Material Options</label>
-                </div>
-                <div class="col-lg-12 col-md-12">
-                    <select class="mdb-select">
-                        <option value="" disabled selected>Choose your option</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
-                    </select>
-                    <label>G/S Options</label>
-                </div>
-                <div class="col-lg-12 col-md-12">
-                    <select class="mdb-select">
-                        <option value="" disabled selected>Choose your option</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
-                    </select>
-                    <label>Lock Options</label>
-                </div>
-            </div>
-
-            <button class="btn btn-primary btn-rounded"> Previous</button>
-            <button id="activate-step-3" class="btn btn-primary btn-rounded"> Next</button>
-        </div>
-    </div>
-
-
-        <div class="row setup-content" id="step-3">
-            <div class="card-block col-12">
-                <div class="col-lg-6">
-                <div class="md-form">
-                    <input type="text" id="form2" class="form-control">
-                    <label for="form2" class="">NAME</label>
-                </div>
-                </div>
-                <div class="col-lg-6">
-                <div class="md-form">
-                    <input type="number" id="form3" class="form-control">
-                    <label for="form3" class="">PHONE</label>
-                </div>
-                    <div class="md-form">
-                        <input type="email" id="form4" class="form-control">
-                        <label for="form3" class="">Email</label>
-                    </div>
-                </div>
-
-                    <!--First column-->
-                    <div class="col-lg-12 col-md-12">
-
-                        <div class="md-form">
-                            <textarea type="text" id="form76" class="md-textarea"></textarea>
-                            <label for="form76">Comments</label>
-                        </div>
-
-                    </div>
-
-
-                <button class="btn btn-primary btn-rounded"> Previous</button>
-                <button class="btn btn-primary btn-rounded"> Submit</button>
-            </div>
-        </div>
-
-
-</div>
-</div>
-<!-- /.Horizontal Steppers -->
-</div>
-
+</section>
 
 <footer class="page-footer center-on-small-only">
 
@@ -503,48 +326,7 @@
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="js/mdb.min.js"></script>
 
-<script>
-    $(document).ready(function() {
-        var navListItems = $('ul.setup-panel li a'),
-            allWells = $('.setup-content');
 
-        allWells.hide();
-
-        navListItems.click(function(e)
-        {
-            e.preventDefault();
-            var $target = $($(this).attr('href')),
-                $item = $(this).closest('li');
-
-            if (!$item.hasClass('disabled')) {
-                navListItems.closest('li').removeClass('active');
-                $item.addClass('active');
-                allWells.hide();
-                $target.show();
-            }
-        });
-
-        $('ul.setup-panel li.active a').trigger('click');
-
-        $('#activate-step-2').on('click', function(e) {
-            $('ul.setup-panel li:eq(1)').removeClass('disabled');
-            $('ul.setup-panel li a[href="#step-2"]').trigger('click');
-            //$(this).remove();
-        });
-        $('#activate-step-3').on('click', function(e) {
-            $('ul.setup-panel li:eq(2)').removeClass('disabled');
-            $('ul.setup-panel li a[href="#step-3"]').trigger('click');
-            //$(this).remove();
-        });
-
-    });
-</script>
-
-<script>
-    $(document).ready(function() {
-        $('.mdb-select').material_select();
-    });
-</script>
-
+<script type="text/javascript" src="js/cutom_canopy.js"></script>
 </body>
 </html>

@@ -327,3 +327,23 @@ $app->get('/products_codes/{id}', function($request){
     mysqli_close($db);
 
 });
+
+$app->get('/custom_index',function($request){
+    $db=new db();
+    $db = $db->connect();
+    $queryy = "select * from mw_custom_canopy order by id";
+    if($result= $db->query($queryy)) {
+        while ($row = $result->fetch_assoc()) {
+            $data[] = $row;
+        }
+    }
+    mysqli_close($db);
+    if(isset($data)){
+        header("Content-Type: application/json;charset=utf-8");
+        echo json_encode($data);
+        //echo "good";
+
+    }
+
+
+});
