@@ -347,3 +347,213 @@ $app->get('/custom_index',function($request){
 
 
 });
+
+
+$app->post('/products/accessory',function($request){
+    if ($request->hasHeader('Accept')) {
+        $test="right";
+
+        $db=new db();
+        $db = $db->connect();
+        $query ="select * from mw_series WHERE product_title = 'Accessory' ";
+        if($result= $db->query($query)) {
+            while ($row = $result->fetch_assoc()) {
+                $data[] = $row;
+            }
+        }
+        mysqli_close($db);
+        if(isset($data)){
+            header("Content-Type: application/json;charset=utf-8");
+            echo json_encode($data);
+
+        }
+
+    }else{
+        echo "error";
+    }
+    /* foreach($allcalls as $key => $values){
+         echo "".$key.": ".implode(",",$values);
+     }
+     //*/
+
+
+});
+
+$app->post('/products/jackoff',function($request){
+    if ($request->hasHeader('Accept')) {
+        $test="right";
+
+        $db=new db();
+        $db = $db->connect();
+        $query ="select * from mw_series WHERE product_title = 'With Jack off System' ";
+        if($result= $db->query($query)) {
+            while ($row = $result->fetch_assoc()) {
+                $data[] = $row;
+            }
+        }
+        mysqli_close($db);
+        if(isset($data)){
+            header("Content-Type: application/json;charset=utf-8");
+            echo json_encode($data);
+
+        }
+
+    }else{
+        echo "error";
+    }
+    /* foreach($allcalls as $key => $values){
+         echo "".$key.": ".implode(",",$values);
+     }
+     //*/
+
+
+});
+
+
+$app->post('/products/floor',function($request){
+    if ($request->hasHeader('Accept')) {
+        $test="right";
+
+        $db=new db();
+        $db = $db->connect();
+        $query ="select * from mw_series WHERE product_title = 'Canopy with Floor' ";
+        if($result= $db->query($query)) {
+            while ($row = $result->fetch_assoc()) {
+                $data[] = $row;
+            }
+        }
+        mysqli_close($db);
+        if(isset($data)){
+            header("Content-Type: application/json;charset=utf-8");
+            echo json_encode($data);
+
+        }
+
+    }else{
+        echo "error";
+    }
+    /* foreach($allcalls as $key => $values){
+         echo "".$key.": ".implode(",",$values);
+     }
+     //*/
+
+
+});
+
+$app->post('/products/nofloor',function($request){
+    if ($request->hasHeader('Accept')) {
+        $test="right";
+
+        $db=new db();
+        $db = $db->connect();
+        $query ="select * from mw_series WHERE product_title = 'Canopy without Floor' ";
+        if($result= $db->query($query)) {
+            while ($row = $result->fetch_assoc()) {
+                $data[] = $row;
+            }
+        }
+        mysqli_close($db);
+        if(isset($data)){
+            header("Content-Type: application/json;charset=utf-8");
+            echo json_encode($data);
+
+        }
+
+    }else{
+        echo "error";
+    }
+    /* foreach($allcalls as $key => $values){
+         echo "".$key.": ".implode(",",$values);
+     }
+     //*/
+
+
+});
+
+
+$app->post('/products/enclosed',function($request){
+    if ($request->hasHeader('Accept')) {
+        $test="right";
+
+        $db=new db();
+        $db = $db->connect();
+        $query ="select * from mw_series WHERE product_title = 'Enclosed Trailer' ";
+        if($result= $db->query($query)) {
+            while ($row = $result->fetch_assoc()) {
+                $data[] = $row;
+            }
+        }
+        mysqli_close($db);
+        if(isset($data)){
+            header("Content-Type: application/json;charset=utf-8");
+            echo json_encode($data);
+
+        }
+
+    }else{
+        echo "error";
+    }
+    /* foreach($allcalls as $key => $values){
+         echo "".$key.": ".implode(",",$values);
+     }
+     //*/
+
+
+});
+
+$app->post('/products/open',function($request){
+    if ($request->hasHeader('Accept')) {
+        $test="right";
+
+        $db=new db();
+        $db = $db->connect();
+        $query ="select * from mw_series WHERE product_title = 'Open Trailer' ";
+        if($result= $db->query($query)) {
+            while ($row = $result->fetch_assoc()) {
+                $data[] = $row;
+            }
+        }
+        mysqli_close($db);
+        if(isset($data)){
+            header("Content-Type: application/json;charset=utf-8");
+            echo json_encode($data);
+
+        }
+
+    }else{
+        echo "error";
+    }
+    /* foreach($allcalls as $key => $values){
+         echo "".$key.": ".implode(",",$values);
+     }
+     //*/
+
+
+});
+
+$app->post('/products/cover',function($request){
+    if ($request->hasHeader('Accept')) {
+        $test="right";
+
+        $db=new db();
+        $db = $db->connect();
+        $query ="select * from mw_series WHERE product_title = 'Trailer Cover' ";
+        if($result= $db->query($query)) {
+            while ($row = $result->fetch_assoc()) {
+                $data[] = $row;
+            }
+        }
+        mysqli_close($db);
+        if(isset($data)){
+            header("Content-Type: application/json;charset=utf-8");
+            echo json_encode($data);
+
+        }
+
+    }else{
+        echo "error";
+    }
+
+
+
+});
