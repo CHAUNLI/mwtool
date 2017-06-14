@@ -46,7 +46,7 @@ function productCardCreate(row,htitle,series,price,series_id) {
     card.appendChild(cardContent1);
     cardContent1.appendChild(aTag);
     cardContent1.appendChild(htag);
-    cardContent1.appendChild(pTag);
+    //cardContent1.appendChild(pTag);
     cardContent1.appendChild(footer);
 
 
@@ -63,20 +63,20 @@ function rowDrawerCreate() {
 
 function columnCreate() {
     var columnDiv = document.createElement('div');
-    columnDiv.className = "col-lg-4 col-md-12 mb-r";
+    columnDiv.className = "col-lg-3 col-md-12 mb-r";
 
     return columnDiv;
 }
 
 function cardCreate() {
     var cardDiv = document.createElement('div');
-    cardDiv.className = "card card-cascade wider";
+    cardDiv.className = "card";
     return cardDiv;
 }
 
 function cardImageCreate(){
     var cardImageDiv = document.createElement('div');
-    cardImageDiv.className='view hm-zoom';
+    cardImageDiv.className='view overlay hm-zoom';
     return cardImageDiv;
 }
 
@@ -85,7 +85,7 @@ function imgCreate(){
 
     img.onload;
     img.src='img/trailers.png';
-
+    img.setAttribute("alt","Card image cap");
     img.className='img-fluid';
     return img;
 }

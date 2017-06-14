@@ -49,19 +49,20 @@ body,
 }
 
 .carousel-item:nth-child(1) {
-    background-image: url("http://wp.widewallpapers.net/4k/cars/offroad/2560x1600/Mercedes-Benz-G500-2015-2560x1600-001.jpg");
+    background-image: url("../img/homeimage1.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
+
 }
 
 .carousel-item:nth-child(2) {
-    background-image: url("http://img.youtube.com/vi/HohyFbvpX1Y/maxresdefault.jpg");
+    background-image: url("../img/homeimage2.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .carousel-item:nth-child(3) {
-    background-image: url("http://wp.widewallpapers.net/4k/cars/offroad/2560x1600/Mercedes-Benz-G500-2015-2560x1600-001.jpg");
+    background-image: url("../img/homeimage3.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -99,6 +100,7 @@ body,
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+
 }
 
 
@@ -128,7 +130,7 @@ body,
     }
 }
 
-#slide1,#slide2 {
+#slide1,#slide2,#slide3 {
     font-size: 72px;
 }
 

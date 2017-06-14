@@ -39,7 +39,7 @@ function indexCreate(title,img_model){
 
 function colCreate(){
     var divCol= document.createElement('div');
-    divCol.className = "col-lg-3 col-md-12 mb-r";
+    divCol.className = "col-lg-4 col-md-12 mb-r";
     var col=document.getElementById('cutom_canopy').appendChild(divCol);
     return col;
 };

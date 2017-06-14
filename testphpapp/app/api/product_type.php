@@ -331,7 +331,7 @@ $app->get('/products_codes/{id}', function($request){
 $app->get('/custom_index',function($request){
     $db=new db();
     $db = $db->connect();
-    $queryy = "select * from mw_custom_canopy order by id";
+    $queryy = "select * from mw_custom_trailer order by id";
     if($result= $db->query($queryy)) {
         while ($row = $result->fetch_assoc()) {
             $data[] = $row;
