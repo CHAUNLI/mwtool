@@ -44,6 +44,7 @@ xmlhttpjack.onreadystatechange = function() {
 };
 
 
+/*
 var xmlhttpfloor = new XMLHttpRequest();
 xmlhttpfloor.open('POST', "http://10.0.0.30/mwtool/testphpapp/myphp/products/floor", true);
 xmlhttpfloor.setRequestHeader("Accept", "application/json");
@@ -63,7 +64,9 @@ xmlhttpfloor.onreadystatechange = function() {
 
     }
 };
+*/
 
+/*
 var xmlhttpfloorno = new XMLHttpRequest();
 xmlhttpfloorno.open('POST', "http://10.0.0.30/mwtool/testphpapp/myphp/products/nofloor", true);
 xmlhttpfloorno.setRequestHeader("Accept", "application/json");
@@ -83,6 +86,7 @@ xmlhttpfloorno.onreadystatechange = function() {
 
     }
 };
+*/
 
 
 function productCardCreate(row,htitle,series,price,series_id) {
@@ -153,13 +157,13 @@ function columnCreate() {
 
 function cardCreate() {
     var cardDiv = document.createElement('div');
-    cardDiv.className = "card card-cascade wider";
+    cardDiv.className = "card";
     return cardDiv;
 }
 
 function cardImageCreate(){
     var cardImageDiv = document.createElement('div');
-    cardImageDiv.className='view hm-zoom';
+    cardImageDiv.className='view overlay hm-zoom z-depth-0';
     return cardImageDiv;
 }
 
@@ -168,7 +172,7 @@ function imgCreate(){
 
     img.onload;
     img.src='img/trailers.png';
-
+    img.setAttribute("alt","Card image cap");
     img.className='img-fluid';
     return img;
 }

@@ -385,7 +385,7 @@ $app->post('/products/jackoff',function($request){
 
         $db=new db();
         $db = $db->connect();
-        $query ="select * from mw_series WHERE product_title = 'With Jack off System' ";
+        $query ="select * from mw_series WHERE product_title = 'Standard Canopy' ";
         if($result= $db->query($query)) {
             while ($row = $result->fetch_assoc()) {
                 $data[] = $row;

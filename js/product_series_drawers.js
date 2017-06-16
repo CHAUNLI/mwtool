@@ -12,7 +12,7 @@ xmlhttpdrawer.onreadystatechange = function() {
         var rowDrawer= rowDrawerCreate();
         for (var i = 0; i < ressDrawer.length; i++) {
             var countersUnder = ressDrawer[i];
-            window.onload= productCardCreate(rowDrawer,countersUnder.product_series,countersUnder.product_title,countersUnder.start_price, countersUnder.product_series_id);
+            window.onload= productCardCreate(rowDrawer,countersUnder.product_series,countersUnder.product_title,countersUnder.start_price, countersUnder.product_series_id,countersUnder.series_image);
             //console.log(counter.product_series);
             //document.write(counter.product_title+" -> "+counter.product_series);
 
@@ -21,13 +21,13 @@ xmlhttpdrawer.onreadystatechange = function() {
     }
 };
 
-function productCardCreate(row,htitle,series,price,series_id) {
+function productCardCreate(row,htitle,series,price,series_id,series_img) {
     // var secCreate = sectionCreate();
     // var row = rowCreate();
     var column = columnCreate();
     var card = cardCreate();
     var cardImage = cardImageCreate();
-    var img = imgCreate();
+    var img = imgCreate(series_img);
     var musk = muskCreate(series_id);
     var cardContent1=cardContent();
     var htag= hTitleCreate(htitle);
@@ -76,15 +76,17 @@ function cardCreate() {
 
 function cardImageCreate(){
     var cardImageDiv = document.createElement('div');
-    cardImageDiv.className='view overlay hm-zoom';
+    cardImageDiv.className='view overlay hm-zoom z-depth-0';
     return cardImageDiv;
 }
 
-function imgCreate(){
+function imgCreate(series_img){
     var img =document.createElement('img');
-
+    if(series_img==""){
+        series_img='img/trailers.png';
+    }
     img.onload;
-    img.src='img/trailers.png';
+    img.src=series_img;
     img.setAttribute("alt","Card image cap");
     img.className='img-fluid';
     return img;

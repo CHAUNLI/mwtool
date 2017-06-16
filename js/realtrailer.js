@@ -13,7 +13,7 @@ xmlhttpenclosed.onreadystatechange = function() {
         var rowDrawer= rowDrawerCreate();
         for (var i = 0; i < ressDrawer.length; i++) {
             var countersUnder = ressDrawer[i];
-            window.onload= productCardCreate(rowDrawer,countersUnder.product_series,countersUnder.product_title,countersUnder.start_price, countersUnder.product_series_id);
+            window.onload= productCardCreate(rowDrawer,countersUnder.product_series,countersUnder.product_title,countersUnder.start_price, countersUnder.product_series_id,countersUnder.series_image);
             //console.log(counter.product_series);
             //document.write(counter.product_title+" -> "+counter.product_series);
 
@@ -33,7 +33,7 @@ xmlhttpopen.onreadystatechange = function() {
         var rowDrawer= rowJackCreate();
         for (var i = 0; i < ressDrawer.length; i++) {
             var countersUnder = ressDrawer[i];
-            window.onload= productCardCreate(rowDrawer,countersUnder.product_series,countersUnder.product_title,countersUnder.start_price, countersUnder.product_series_id);
+            window.onload= productCardCreate(rowDrawer,countersUnder.product_series,countersUnder.product_title,countersUnder.start_price, countersUnder.product_series_id,countersUnder.series_image);
             //console.log(counter.product_series);
             //document.write(counter.product_title+" -> "+counter.product_series);
 
@@ -54,7 +54,7 @@ xmlhttpcover.onreadystatechange = function() {
         var rowDrawer= rowFloorCreate();
         for (var i = 0; i < ressDrawer.length; i++) {
             var countersUnder = ressDrawer[i];
-            window.onload= productCardCreate(rowDrawer,countersUnder.product_series,countersUnder.product_title,countersUnder.start_price, countersUnder.product_series_id);
+            window.onload= productCardCreate(rowDrawer,countersUnder.product_series,countersUnder.product_title,countersUnder.start_price, countersUnder.product_series_id,countersUnder.series_image);
             //console.log(counter.product_series);
             //document.write(counter.product_title+" -> "+counter.product_series);
 
@@ -65,13 +65,13 @@ xmlhttpcover.onreadystatechange = function() {
 
 
 
-function productCardCreate(row,htitle,series,price,series_id) {
+function productCardCreate(row,htitle,series,price,series_id,image) {
     // var secCreate = sectionCreate();
     // var row = rowCreate();
     var column = columnCreate();
     var card = cardCreate();
     var cardImage = cardImageCreate();
-    var img = imgCreate();
+    var img = imgCreate(image);
     var musk = muskCreate(series_id);
     var cardContent1=cardContent();
     var htag= hTitleCreate(htitle);
@@ -128,22 +128,26 @@ function columnCreate() {
 
 function cardCreate() {
     var cardDiv = document.createElement('div');
-    cardDiv.className = "card card-cascade wider";
+    cardDiv.className = "card";
     return cardDiv;
 }
 
 function cardImageCreate(){
     var cardImageDiv = document.createElement('div');
-    cardImageDiv.className='view hm-zoom';
+    cardImageDiv.className='view overlay hm-zoom z-depth-0';
     return cardImageDiv;
 }
 
-function imgCreate(){
+function imgCreate(image){
     var img =document.createElement('img');
 
-    img.onload;
-    img.src='img/trailers.png';
+    if(image==""){
+        image='img/trailers.png';
+    }
 
+    img.onload;
+    img.src=image;
+    img.setAttribute("alt","Card image cap");
     img.className='img-fluid';
     return img;
 }

@@ -14,7 +14,7 @@ xmlhttp1.onreadystatechange = function() {
         var row2= row2Create();
         for (var i = 0; i < res.length; i++) {
             var counter = res[i];
-            window.onload= productCardCreate(row2,counter.product_series,counter.product_title,counter.start_price,counter.product_series_id);
+            window.onload= productCardCreate(row2,counter.product_series,counter.product_title,counter.start_price,counter.product_series_id,counter.series_image);
             //console.log(counter.product_series);
             //document.write(counter.product_title+" -> "+counter.product_series);
 
@@ -31,7 +31,7 @@ trayhttp.onreadystatechange = function() {
         var rowTray= rowTrayCreate();
         for (var i = 0; i < res.length; i++) {
             var counter = res[i];
-            window.onload= productCardCreate(rowTray,counter.product_series,counter.product_title,counter.start_price,counter.product_series_id);
+            window.onload= productCardCreate(rowTray,counter.product_series,counter.product_title,counter.start_price,counter.product_series_id,counter.series_image);
             //console.log(counter.product_series);
             //document.write(counter.product_title+" -> "+counter.product_series);
 
@@ -48,7 +48,7 @@ powerhttp.onreadystatechange = function() {
         var rowPower= rowPowerCreate();
         for (var i = 0; i < res.length; i++) {
             var counter = res[i];
-            window.onload= productCardCreate(rowPower,counter.product_series,counter.product_title,counter.start_price,counter.product_series_id);
+            window.onload= productCardCreate(rowPower,counter.product_series,counter.product_title,counter.start_price,counter.product_series_id,counter.series_image);
             //console.log(counter.product_series);
             //document.write(counter.product_title+" -> "+counter.product_series);
 

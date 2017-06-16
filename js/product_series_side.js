@@ -12,7 +12,7 @@ xmlhttpside.onreadystatechange = function() {
         var row= rowCreate();
         for (var i = 0; i < ress.length; i++) {
             var counters = ress[i];
-            window.onload= productCardCreate(row,counters.product_series,counters.product_title,counters.start_price,counters.product_series_id);
+            window.onload= productCardCreate(row,counters.product_series,counters.product_title,counters.start_price,counters.product_series_id,counters.series_image);
             //console.log(counter.product_series);
             //document.write(counter.product_title+" -> "+counter.product_series);
 
