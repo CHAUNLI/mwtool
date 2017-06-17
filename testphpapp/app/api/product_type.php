@@ -348,6 +348,46 @@ $app->get('/custom_index',function($request){
 
 });
 
+$app->get('/custom_canopy',function($request){
+    $db=new db();
+    $db = $db->connect();
+    $queryy = "select * from mw_custom_canopy order by id";
+    if($result= $db->query($queryy)) {
+        while ($row = $result->fetch_assoc()) {
+            $data[] = $row;
+        }
+    }
+    mysqli_close($db);
+    if(isset($data)){
+        header("Content-Type: application/json;charset=utf-8");
+        echo json_encode($data);
+        //echo "good";
+
+    }
+
+
+});
+
+$app->get('/custom_toolbox',function($request){
+    $db=new db();
+    $db = $db->connect();
+    $queryy = "select * from mw_custom_toolbox order by id";
+    if($result= $db->query($queryy)) {
+        while ($row = $result->fetch_assoc()) {
+            $data[] = $row;
+        }
+    }
+    mysqli_close($db);
+    if(isset($data)){
+        header("Content-Type: application/json;charset=utf-8");
+        echo json_encode($data);
+        //echo "good";
+
+    }
+
+
+});
+
 
 $app->post('/products/accessory',function($request){
     if ($request->hasHeader('Accept')) {
