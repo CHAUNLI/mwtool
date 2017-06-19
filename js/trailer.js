@@ -3,7 +3,7 @@
  */
 
 var xmlhttpdrawer = new XMLHttpRequest();
-xmlhttpdrawer.open('POST', "http://10.0.0.30/mwtool/testphpapp/myphp/products/accessory", true);
+xmlhttpdrawer.open('POST', "http://10.0.0.31/mwtool/testphpapp/myphp/products/accessory", true);
 xmlhttpdrawer.setRequestHeader("Accept", "application/json");
 xmlhttpdrawer.send();
 
@@ -24,7 +24,7 @@ xmlhttpdrawer.onreadystatechange = function() {
 
 
 var xmlhttpjack = new XMLHttpRequest();
-xmlhttpjack.open('POST', "http://10.0.0.30/mwtool/testphpapp/myphp/products/jackoff", true);
+xmlhttpjack.open('POST', "http://10.0.0.31/mwtool/testphpapp/myphp/products/jackoff", true);
 xmlhttpjack.setRequestHeader("Accept", "application/json");
 xmlhttpjack.send();
 

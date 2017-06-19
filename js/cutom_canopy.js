@@ -2,7 +2,7 @@
  * Created by MW Toolbox on 12/06/2017.
  */
 var xmlCusCanopy = new XMLHttpRequest();
-xmlCusCanopy.open('GET', "http://10.0.0.30/mwtool/testphpapp/myphp/custom_index", true);
+xmlCusCanopy.open('GET', "http://10.0.0.31/mwtool/testphpapp/myphp/custom_index", true);
 
 xmlCusCanopy.send();
 

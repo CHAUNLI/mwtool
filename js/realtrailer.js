@@ -3,7 +3,7 @@
  */
 
 var xmlhttpenclosed = new XMLHttpRequest();
-xmlhttpenclosed.open('POST', "http://10.0.0.30/mwtool/testphpapp/myphp/products/enclosed", true);
+xmlhttpenclosed.open('POST', "http://10.0.0.31/mwtool/testphpapp/myphp/products/enclosed", true);
 xmlhttpenclosed.setRequestHeader("Accept", "application/json");
 xmlhttpenclosed.send();
 
@@ -23,7 +23,7 @@ xmlhttpenclosed.onreadystatechange = function() {
 };
 
 var xmlhttpopen = new XMLHttpRequest();
-xmlhttpopen.open('POST', "http://10.0.0.30/mwtool/testphpapp/myphp/products/open", true);
+xmlhttpopen.open('POST', "http://10.0.0.31/mwtool/testphpapp/myphp/products/open", true);
 xmlhttpopen.setRequestHeader("Accept", "application/json");
 xmlhttpopen.send();
 
@@ -44,7 +44,7 @@ xmlhttpopen.onreadystatechange = function() {
 
 
 var xmlhttpcover = new XMLHttpRequest();
-xmlhttpcover.open('POST', "http://10.0.0.30/mwtool/testphpapp/myphp/products/cover", true);
+xmlhttpcover.open('POST', "http://10.0.0.31/mwtool/testphpapp/myphp/products/cover", true);
 xmlhttpcover.setRequestHeader("Accept", "application/json");
 xmlhttpcover.send();
 

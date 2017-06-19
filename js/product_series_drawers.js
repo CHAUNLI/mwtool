@@ -2,7 +2,7 @@
  * Created by MW Toolbox on 19/05/2017.
  */
 var xmlhttpdrawer = new XMLHttpRequest();
-xmlhttpdrawer.open('POST', "http://10.0.0.30/mwtool/testphpapp/myphp/products/series_drawers", true);
+xmlhttpdrawer.open('POST', "http://10.0.0.31/mwtool/testphpapp/myphp/products/series_drawers", true);
 xmlhttpdrawer.setRequestHeader("Accept", "application/json");
 xmlhttpdrawer.send();
 

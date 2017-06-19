@@ -29,7 +29,7 @@ if(id){
 
 function xmlHttpCall(ids){
     var specific_product= new XMLHttpRequest();
-    specific_product.open('GET', "http://10.0.0.30/mwtool/testphpapp/myphp/products_name/"+ids, true);
+    specific_product.open('GET', "http://10.0.0.31/mwtool/testphpapp/myphp/products_name/"+ids, true);
     specific_product.setRequestHeader("Accept", "application/json");
     specific_product.send();
 
@@ -48,7 +48,7 @@ function xmlHttpCall(ids){
 
 function xmlCodeHttpCall(ids){
     var specific_product= new XMLHttpRequest();
-    specific_product.open('GET', "http://10.0.0.30/mwtool/testphpapp/myphp/products_codes/"+ids, true);
+    specific_product.open('GET', "http://10.0.0.31/mwtool/testphpapp/myphp/products_codes/"+ids, true);
     specific_product.setRequestHeader("Accept", "application/json");
     specific_product.send();
 
@@ -108,7 +108,7 @@ function trCreate(){
 
 function xmlHttpFeaturesCall(ids){
     var specific_product= new XMLHttpRequest();
-    specific_product.open('GET', "http://10.0.0.30/mwtool/testphpapp/myphp/products_features/"+ids, true);
+    specific_product.open('GET', "http://10.0.0.31/mwtool/testphpapp/myphp/products_features/"+ids, true);
     specific_product.setRequestHeader("Accept", "application/json");
     specific_product.send();
 
@@ -116,6 +116,15 @@ function xmlHttpFeaturesCall(ids){
     specific_product.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             var res = JSON.parse(specific_product.responseText);
+            var img_path=res.img_path;
+            var frame_path=res.frame_sketch;
+            if(img_path!=""){
+                document.getElementById("target_img").src=img_path;
+            }
+
+            if(frame_path!=""){
+                document.getElementById("model_sketch_3d").src=frame_path;
+            }
             var f1=res.features1;
             var f2=res.features2;
             var f3=res.features3;
