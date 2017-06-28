@@ -2,8 +2,8 @@
  * Created by MW Toolbox on 13/06/2017.
  */
 
-var xmlhttpdrawer = new XMLHttpRequest();
-xmlhttpdrawer.open('POST', "http://10.0.0.31/mwtool/testphpapp/myphp/products/accessory", true);
+/*var xmlhttpdrawer = new XMLHttpRequest();
+xmlhttpdrawer.open('POST', "http://www.mwtoolboxqld.com.au/testphpapp/myphp/products/accessory", true);
 xmlhttpdrawer.setRequestHeader("Accept", "application/json");
 xmlhttpdrawer.send();
 
@@ -13,18 +13,18 @@ xmlhttpdrawer.onreadystatechange = function() {
         var rowDrawer= rowDrawerCreate();
         for (var i = 0; i < ressDrawer.length; i++) {
             var countersUnder = ressDrawer[i];
-            window.onload= productCardCreate(rowDrawer,countersUnder.product_series,countersUnder.product_title,countersUnder.start_price, countersUnder.product_series_id);
+            window.onload= productCardCreate(rowDrawer,countersUnder.product_series,countersUnder.product_title,countersUnder.start_price, countersUnder.product_series_id,countersUnder.series_image);
             //console.log(counter.product_series);
             //document.write(counter.product_title+" -> "+counter.product_series);
 
         }
 
     }
-};
+};*/
 
 
 var xmlhttpjack = new XMLHttpRequest();
-xmlhttpjack.open('POST', "http://10.0.0.31/mwtool/testphpapp/myphp/products/jackoff", true);
+xmlhttpjack.open('POST', "http://www.mwtoolboxqld.com.au/testphpapp/myphp/products/jackoff", true);
 xmlhttpjack.setRequestHeader("Accept", "application/json");
 xmlhttpjack.send();
 
@@ -34,7 +34,7 @@ xmlhttpjack.onreadystatechange = function() {
         var rowDrawer= rowJackCreate();
         for (var i = 0; i < ressDrawer.length; i++) {
             var countersUnder = ressDrawer[i];
-            window.onload= productCardCreate(rowDrawer,countersUnder.product_series,countersUnder.product_title,countersUnder.start_price, countersUnder.product_series_id);
+            window.onload= productCardCreate(rowDrawer,countersUnder.product_series,countersUnder.product_title,countersUnder.start_price, countersUnder.product_series_id, countersUnder.series_image);
             //console.log(counter.product_series);
             //document.write(counter.product_title+" -> "+counter.product_series);
 
@@ -43,6 +43,49 @@ xmlhttpjack.onreadystatechange = function() {
     }
 };
 
+
+
+var xmlhttpmini = new XMLHttpRequest();
+xmlhttpmini.open('POST', "http://www.mwtoolboxqld.com.au/testphpapp/myphp/products/mini", true);
+xmlhttpmini.setRequestHeader("Accept", "application/json");
+xmlhttpmini.send();
+
+xmlhttpmini.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var ressDrawer = JSON.parse(xmlhttpmini.responseText);
+        var rowDrawer= rowMiniCreate();
+        for (var i = 0; i < ressDrawer.length; i++) {
+            var countersUnder = ressDrawer[i];
+            window.onload= productCardCreate(rowDrawer,countersUnder.product_series,countersUnder.product_title,countersUnder.start_price, countersUnder.product_series_id, countersUnder.series_image);
+            //console.log(counter.product_series);
+            //document.write(counter.product_title+" -> "+counter.product_series);
+
+        }
+
+    }
+};
+
+
+
+/*var xmlhttpdog = new XMLHttpRequest();
+xmlhttpdog.open('POST', "http://www.mwtoolboxqld.com.au/testphpapp/myphp/products/dogbox", true);
+xmlhttpdog.setRequestHeader("Accept", "application/json");
+xmlhttpdog.send();
+
+xmlhttpdog.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var ressDrawer = JSON.parse(xmlhttpdog.responseText);
+        var rowDrawer= rowDogboxCreate();
+        for (var i = 0; i < ressDrawer.length; i++) {
+            var countersUnder = ressDrawer[i];
+            window.onload= productCardCreate(rowDrawer,countersUnder.product_series,countersUnder.product_title,countersUnder.start_price, countersUnder.product_series_id, countersUnder.series_image);
+            //console.log(counter.product_series);
+            //document.write(counter.product_title+" -> "+counter.product_series);
+
+        }
+
+    }
+};*/
 
 /*
 var xmlhttpfloor = new XMLHttpRequest();
@@ -89,13 +132,13 @@ xmlhttpfloorno.onreadystatechange = function() {
 */
 
 
-function productCardCreate(row,htitle,series,price,series_id) {
+function productCardCreate(row,htitle,series,price,series_id,imgs) {
     // var secCreate = sectionCreate();
     // var row = rowCreate();
     var column = columnCreate();
     var card = cardCreate();
     var cardImage = cardImageCreate();
-    var img = imgCreate();
+    var img = imgCreate(imgs);
     var musk = muskCreate(series_id);
     var cardContent1=cardContent();
     var htag= hTitleCreate(htitle);
@@ -121,12 +164,29 @@ function productCardCreate(row,htitle,series,price,series_id) {
 };
 
 
+function rowMiniCreate() {
+    var rowDiv = document.createElement('div');
+    rowDiv.className = "row";
+    var rowsec = document.getElementById('mini_canopy').appendChild(rowDiv);
+    return rowsec;
+}
+
+
+
+/*function rowDogboxCreate() {
+    var rowDiv = document.createElement('div');
+    rowDiv.className = "row";
+    var rowsec = document.getElementById('dog_box').appendChild(rowDiv);
+    return rowsec;
+}*/
+
+/*
 function rowDrawerCreate() {
     var rowDiv = document.createElement('div');
     rowDiv.className = "row";
     var rowsec = document.getElementById('accessory').appendChild(rowDiv);
     return rowsec;
-}
+}*/
 
 function rowJackCreate() {
     var rowDiv = document.createElement('div');
@@ -167,11 +227,11 @@ function cardImageCreate(){
     return cardImageDiv;
 }
 
-function imgCreate(){
+function imgCreate(imgs){
     var img =document.createElement('img');
 
     img.onload;
-    img.src='img/trailers.png';
+    img.src=imgs;
     img.setAttribute("alt","Card image cap");
     img.className='img-fluid';
     return img;
@@ -217,8 +277,8 @@ function aCreate(series){
 function pCreate(){
     var pcontent =document.createElement('p');
     pcontent.className='card-text';
-    pcontent.innerHTML='Lorem ipsum dolor sit amet, consectetur adipisicing minima veniam elit. Nam incidunt eius est voluptatibus.';
-    return pcontent;
+   /* pcontent.innerHTML='Lorem ipsum dolor sit amet, consectetur adipisicing minima veniam elit. Nam incidunt eius est voluptatibus.';
+    */return pcontent;
 }
 
 function cardFooterCreate(price){

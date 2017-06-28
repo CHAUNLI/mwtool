@@ -1,4 +1,11 @@
 .card:hover{
     border: 2px solid;
-    color:green;
+    color:#009688 ;
+}
+
+#contact-mw3,#contact-mw4,#contact-mw5{
+
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-bottom: 0rem;
 }

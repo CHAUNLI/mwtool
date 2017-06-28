@@ -3,7 +3,7 @@
  */
 
 var xmlhttpenclosed = new XMLHttpRequest();
-xmlhttpenclosed.open('POST', "http://10.0.0.31/mwtool/testphpapp/myphp/products/enclosed", true);
+xmlhttpenclosed.open('POST', "http://www.mwtoolboxqld.com.au/testphpapp/myphp/products/enclosed", true);
 xmlhttpenclosed.setRequestHeader("Accept", "application/json");
 xmlhttpenclosed.send();
 
@@ -23,7 +23,7 @@ xmlhttpenclosed.onreadystatechange = function() {
 };
 
 var xmlhttpopen = new XMLHttpRequest();
-xmlhttpopen.open('POST', "http://10.0.0.31/mwtool/testphpapp/myphp/products/open", true);
+xmlhttpopen.open('POST', "http://www.mwtoolboxqld.com.au/testphpapp/myphp/products/open", true);
 xmlhttpopen.setRequestHeader("Accept", "application/json");
 xmlhttpopen.send();
 
@@ -44,7 +44,7 @@ xmlhttpopen.onreadystatechange = function() {
 
 
 var xmlhttpcover = new XMLHttpRequest();
-xmlhttpcover.open('POST', "http://10.0.0.31/mwtool/testphpapp/myphp/products/cover", true);
+xmlhttpcover.open('POST', "http://www.mwtoolboxqld.com.au/testphpapp/myphp/products/cover", true);
 xmlhttpcover.setRequestHeader("Accept", "application/json");
 xmlhttpcover.send();
 
@@ -192,8 +192,8 @@ function aCreate(series){
 function pCreate(){
     var pcontent =document.createElement('p');
     pcontent.className='card-text';
-    pcontent.innerHTML='Lorem ipsum dolor sit amet, consectetur adipisicing minima veniam elit. Nam incidunt eius est voluptatibus.';
-    return pcontent;
+   /* pcontent.innerHTML='Lorem ipsum dolor sit amet, consectetur adipisicing minima veniam elit. Nam incidunt eius est voluptatibus.';
+   */ return pcontent;
 }
 
 function cardFooterCreate(price){

@@ -57,15 +57,15 @@ powerhttp.onreadystatechange = function() {
     }
 };
 
-xmlhttp1.open('POST', "http://10.0.0.31/mwtool/testphpapp/myphp/products/series_top", true);
+xmlhttp1.open('POST', "http://www.mwtoolboxqld.com.au/testphpapp/myphp/products/series_top", true);
 xmlhttp1.setRequestHeader("Accept", "application/json");
 xmlhttp1.send();
 
-trayhttp.open('POST', "http://10.0.0.31/mwtool/testphpapp/myphp/products/series_tray", true);
+trayhttp.open('POST', "http://www.mwtoolboxqld.com.au/testphpapp/myphp/products/series_tray", true);
 trayhttp.setRequestHeader("Accept", "application/json");
 trayhttp.send();
 
-powerhttp.open('POST', "http://10.0.0.31/mwtool/testphpapp/myphp/products/series_coated", true);
+powerhttp.open('POST', "http://www.mwtoolboxqld.com.au/testphpapp/myphp/products/series_coated", true);
 powerhttp.setRequestHeader("Accept", "application/json");
 powerhttp.send();
 

@@ -38,6 +38,7 @@ $Body .= '</body></html>';
 
 // send email
 $success = mail($EmailTo, $Subject, $Body, $headers);
+$success = mail($email, "success message", "we would contact you quickly", $headers);
 
 // redirect to success page
 if ($success){

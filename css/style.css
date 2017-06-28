@@ -49,14 +49,14 @@ body,
 }
 
 .carousel-item:nth-child(1) {
-    background-image: url("../img/homeimage2.png");
+    background-image: url("../img/homeimage3.png");
     background-repeat: no-repeat;
     background-size:cover;
 
 }
 
 .carousel-item:nth-child(2) {
-    background-image: url("../img/homeimage2.png");
+    background-image: url("../img/homeimage3.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -138,7 +138,7 @@ body,
     margin-top: 5%;
 }
 
-#contact-mw{
+#contact-mw,#contact-mw1{
     background-color: #4d51aa;
     padding-top: 1%;
     padding-bottom: 1%;

@@ -7,12 +7,7 @@
  */
 
 
-$app->get('/hello/{name}', function (Request $request, Response $response) {
 
-    $name = $request->getAttribute('name');
-    $response->getBody()->write("Hello, $name");
-    return $response;
-});
 
 
 
@@ -277,6 +272,21 @@ $app->get('/products_name/{id}', function($request){
 });
 
 
+$app->get('/products_names/{id}', function($request){
+    $db=new db();
+    $db = $db->connect();
+    $id=$request->getAttribute('id');
+    $query ="select * from mw_series where id=$id";
+    $result= $db->query($query);
+    $data=$result->fetch_assoc();
+    header("Content-Type: application/json;charset=utf-8");
+    echo json_encode($data);
+
+    mysqli_close($db);
+
+});
+
+
 $app->get('/products_features/{id}', function($request){
     $db=new db();
     $db = $db->connect();
@@ -332,6 +342,72 @@ $app->get('/custom_index',function($request){
     $db=new db();
     $db = $db->connect();
     $queryy = "select * from mw_custom_trailer order by id";
+    if($result= $db->query($queryy)) {
+        while ($row = $result->fetch_assoc()) {
+            $data[] = $row;
+        }
+    }
+    mysqli_close($db);
+    if(isset($data)){
+        header("Content-Type: application/json;charset=utf-8");
+        echo json_encode($data);
+        //echo "good";
+
+    }
+
+
+});
+
+
+$app->get('/custom_index/{id}',function($request){
+    $db=new db();
+    $db = $db->connect();
+    $id=$request->getAttribute('id');
+    $queryy = "select * from mw_custom_trailer where index_id= $id";
+    if($result= $db->query($queryy)) {
+        while ($row = $result->fetch_assoc()) {
+            $data[] = $row;
+        }
+    }
+    mysqli_close($db);
+    if(isset($data)){
+        header("Content-Type: application/json;charset=utf-8");
+        echo json_encode($data);
+        //echo "good";
+
+    }
+
+
+});
+
+$app->get('/custom_canopy_index/{id}',function($request){
+    $db=new db();
+    $db = $db->connect();
+    $id=$request->getAttribute('id');
+    $queryy = "select * from mw_custom_toolbox where index_id= $id";
+    if($result= $db->query($queryy)) {
+        while ($row = $result->fetch_assoc()) {
+            $data[] = $row;
+        }
+    }
+    mysqli_close($db);
+    if(isset($data)){
+        header("Content-Type: application/json;charset=utf-8");
+        echo json_encode($data);
+        //echo "good";
+
+    }
+
+
+});
+
+
+
+$app->get('/custom_toolboxes_index/{id}',function($request){
+    $db=new db();
+    $db = $db->connect();
+    $id=$request->getAttribute('id');
+    $queryy = "select * from mw_custom_canopy where index_id= $id";
     if($result= $db->query($queryy)) {
         while ($row = $result->fetch_assoc()) {
             $data[] = $row;
@@ -448,6 +524,69 @@ $app->post('/products/jackoff',function($request){
 
 
 });
+
+
+$app->post('/products/mini',function($request){
+    if ($request->hasHeader('Accept')) {
+        $test="right";
+
+        $db=new db();
+        $db = $db->connect();
+        $query ="select * from mw_series WHERE product_title = 'Mini Canopy/Dog Cage' ";
+        if($result= $db->query($query)) {
+            while ($row = $result->fetch_assoc()) {
+                $data[] = $row;
+            }
+        }
+        mysqli_close($db);
+        if(isset($data)){
+            header("Content-Type: application/json;charset=utf-8");
+            echo json_encode($data);
+
+        }
+
+    }else{
+        echo "error";
+    }
+    /* foreach($allcalls as $key => $values){
+         echo "".$key.": ".implode(",",$values);
+     }
+     //*/
+
+
+});
+
+
+
+/*$app->post('/products/dogbox',function($request){
+if ($request->hasHeader('Accept')) {
+    $test="right";
+
+    $db=new db();
+    $db = $db->connect();
+    $query ="select * from mw_series WHERE product_title = 'Dog Cage' ";
+    if($result= $db->query($query)) {
+        while ($row = $result->fetch_assoc()) {
+            $data[] = $row;
+        }
+    }
+    mysqli_close($db);
+    if(isset($data)){
+        header("Content-Type: application/json;charset=utf-8");
+        echo json_encode($data);
+
+    }
+
+}else{
+    echo "error";
+}
+/* foreach($allcalls as $key => $values){
+     echo "".$key.": ".implode(",",$values);
+ }
+ //*/
+
+
+/*});*/
 
 
 $app->post('/products/floor',function($request){

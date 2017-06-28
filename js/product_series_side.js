@@ -2,7 +2,7 @@
  * Created by MW Toolbox on 19/05/2017.
  */
 var xmlhttpside = new XMLHttpRequest();
-xmlhttpside.open('POST', "http://10.0.0.31/mwtool/testphpapp/myphp/products/series_side", true);
+xmlhttpside.open('POST', "http://www.mwtoolboxqld.com.au/testphpapp/myphp/products/series_side", true);
 xmlhttpside.setRequestHeader("Accept", "application/json");
 xmlhttpside.send();
 

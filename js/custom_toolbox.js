@@ -5,7 +5,7 @@
  * Created by MW Toolbox on 12/06/2017.
  */
 var xmlCusCanopy = new XMLHttpRequest();
-xmlCusCanopy.open('GET', "http://10.0.0.31/mwtool/testphpapp/myphp/custom_toolbox", true);
+xmlCusCanopy.open('GET', "http://www.mwtoolboxqld.com.au/testphpapp/myphp/custom_toolbox", true);
 
 xmlCusCanopy.send();
 
@@ -15,7 +15,7 @@ xmlCusCanopy.onreadystatechange = function() {
 
         for (var i = 0; i < cusCanopy.length; i++) {
             var cusContent = cusCanopy[i];
-            window.onload = indexCreate(cusContent.name,cusContent.sketch_model);
+            window.onload = indexCreate(cusContent.name,cusContent.sketch_model,cusContent.index_id);
             // window.onload= productCardCreate(rowDrawer,countersUnder.product_series,countersUnder.product_title,countersUnder.start_price, countersUnder.product_series_id);
             //console.log(counter.product_series);
             //document.write(counter.product_title+" -> "+counter.product_series);
@@ -27,10 +27,10 @@ xmlCusCanopy.onreadystatechange = function() {
 
 
 
-function indexCreate(title,img_model){
+function indexCreate(title,img_model,index_id){
     var coll=colCreate();
     var card=cardCreate();
-    var musk=muskCreate(img_model);
+    var musk=muskCreate(img_model,index_id);
     var cardBlock=cardBlocks(title);
 
 
@@ -53,16 +53,18 @@ function cardCreate(){
     return card;
 };
 
-function muskCreate(img_model){
+function muskCreate(img_model,index_id){
     var musk = document.createElement('div');
     musk.className="view overlay hm-white-slight";
     var image = document.createElement('img');
     image.setAttribute("src",img_model);
     image.className="img-fluid";
     var muskLight=document.createElement('a');
-    muskLight.setAttribute("href","custom_page.html");
+    /*muskLight.setAttribute("href","custom_page_canopy.html");*/
     var muskDiv=document.createElement('div');
     muskDiv.className="mask waves-effect waves-light";
+    muskDiv.id=index_id;
+    muskDiv.setAttribute('onclick','clickCustomCanopyEvent('+index_id+')');
     musk.appendChild(image);
     musk.appendChild(muskLight);
     muskLight.appendChild(muskDiv);

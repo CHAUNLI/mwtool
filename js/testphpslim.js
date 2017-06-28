@@ -14,7 +14,7 @@ xmlhttp.onreadystatechange = function() {
 
     }
 };
-xmlhttp.open('POST', "http://localhost/mwtool/testphpapp/myphp/products/series", true);
+xmlhttp.open('POST', "http://www.mwtoolboxqld.com.au/testphpapp/myphp/products/series", true);
 xmlhttp.setRequestHeader("Accept", "application/json");
 xmlhttp.send();
 

@@ -29,15 +29,17 @@ if(id){
 
 function xmlHttpCall(ids){
     var specific_product= new XMLHttpRequest();
-    specific_product.open('GET', "http://10.0.0.31/mwtool/testphpapp/myphp/products_name/"+ids, true);
+    specific_product.open('GET', "http://www.mwtoolboxqld.com.au/testphpapp/myphp/products_names/"+ids, true);
     specific_product.setRequestHeader("Accept", "application/json");
     specific_product.send();
 
 
     specific_product.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            var res = specific_product.responseText;
-            document.getElementById("test").innerHTML=res;
+            var res = JSON.parse(specific_product.responseText);
+            document.getElementById("test").innerHTML=res.product_series;
+          /*  document.getElementById("price").innerHTML=res.start_price;
+            document.getElementById("product_title").innerHTML=res.product_title;*/
 
 
         }
@@ -48,7 +50,7 @@ function xmlHttpCall(ids){
 
 function xmlCodeHttpCall(ids){
     var specific_product= new XMLHttpRequest();
-    specific_product.open('GET', "http://10.0.0.31/mwtool/testphpapp/myphp/products_codes/"+ids, true);
+    specific_product.open('GET', "http://www.mwtoolboxqld.com.au/testphpapp/myphp/products_codes/"+ids, true);
     specific_product.setRequestHeader("Accept", "application/json");
     specific_product.send();
 
@@ -108,7 +110,7 @@ function trCreate(){
 
 function xmlHttpFeaturesCall(ids){
     var specific_product= new XMLHttpRequest();
-    specific_product.open('GET', "http://10.0.0.31/mwtool/testphpapp/myphp/products_features/"+ids, true);
+    specific_product.open('GET', "http://www.mwtoolboxqld.com.au/testphpapp/myphp/products_features/"+ids, true);
     specific_product.setRequestHeader("Accept", "application/json");
     specific_product.send();
 
@@ -123,7 +125,21 @@ function xmlHttpFeaturesCall(ids){
             }
 
             if(frame_path!=""){
-                document.getElementById("model_sketch_3d").src=frame_path;
+                var divFrameCreate= document.createElement('div');
+                divFrameCreate.className="embed-responsive embed-responsive-4by3";
+                var frameWarehouse=document.createElement('iframe');
+                frameWarehouse.className="embed-responsive-item";
+                frameWarehouse.src=frame_path;
+                frameWarehouse.setAttribute("frameborder","0");
+                frameWarehouse.setAttribute("scrolling","no");
+                frameWarehouse.setAttribute("marginheight","0");
+                frameWarehouse.setAttribute("marginwidth","0");
+                frameWarehouse.setAttribute("width","100%");
+                frameWarehouse.setAttribute("height","326");
+                frameWarehouse.setAttribute("allowfullscreen","");
+
+                document.getElementById("model_sketch_3d").appendChild(divFrameCreate);
+                divFrameCreate.appendChild(frameWarehouse);
             }
             var f1=res.features1;
             var f2=res.features2;
@@ -132,22 +148,22 @@ function xmlHttpFeaturesCall(ids){
             var f5=res.features5;
             var f6=res.features6;
 
-            if(f1!=null) {
+            if(f1!="") {
                 listCreated(f1);
             }
-            if(f2!=null) {
+            if(f2!="") {
                 listCreated(f2);
             }
-            if(f3!=null) {
+            if(f3!="") {
                 listCreated(f3);
             }
-            if(f4!=null) {
+            if(f4!="") {
                 listCreated(f4);
             }
-            if(f5!=null) {
+            if(f5!="") {
                 listCreated(f5);
             }
-            if(f6!=null) {
+            if(f6!="") {
                 listCreated(f6);
             }
 
@@ -158,8 +174,36 @@ function xmlHttpFeaturesCall(ids){
 }
 
 function listCreated(f){
+
+
+    var rowCreate=document.createElement("div");
+    rowCreate.className="row";
+    var colCreate=document.createElement("div");
+    colCreate.className="col-1 mr-1";
+    var icoon=document.createElement("i");
+    icoon.className="fa fa-check-circle fa-lg light-green-text";
+    icoon.setAttribute("aria-hidden","true");
+    var contentCreate=document.createElement("div");
+    contentCreate.className="col-10";
+    var pCreate=document.createElement("p");
+   // pCreate.className="grey-text";
+    pCreate.innerHTML=f;
+
+    document.getElementById("test_list").appendChild(rowCreate);
+    rowCreate.appendChild(colCreate);
+    colCreate.appendChild(icoon);
+    rowCreate.appendChild(contentCreate);
+    contentCreate.appendChild(pCreate);
+
+   /*var icoon=document.createElement("i");
+    icoon.className="fa fa-plus green-text";
+    icoon.setAttribute("aria-hidden","true");
     var li=document.createElement("li");
-    li.innerHTML=f;
+
     document.getElementById("test_list").appendChild(li);
+    li.appendChild(icoon);
+    icoon.innerHTML=f;*/
+
+
 
 }
