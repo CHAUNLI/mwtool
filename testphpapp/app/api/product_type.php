@@ -31,6 +31,26 @@ $app->get('/products',function(){
 
 });
 
+$app->get('/gallery',function(){
+
+    $db=new db();
+    $db = $db->connect();
+    $queryy = "select * from mw_gallery order by id";
+    if($result= $db->query($queryy)) {
+        while ($row = $result->fetch_assoc()) {
+            $data[] = $row;
+        }
+    }
+    mysqli_close($db);
+    if(isset($data)){
+        header("Content-Type: application/json;charset=utf-8");
+        echo json_encode($data);
+        //echo "good";
+
+    }
+
+});
+
 
 $app->get('/products/{id}', function($request){
     $db=new db();
