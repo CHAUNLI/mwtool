@@ -16,8 +16,8 @@ function xmlHttpCall(){
             var res = JSON.parse(specific_product.responseText);
             var gallerysrc;
             for (var i = 0; i < res.length; i++) {
-                gallerysrc = res[i].src_path;
-            }
+               // gallerysrc[i] = res[i].src_path;
+           /* }
 
             for ( var i = 0; i <= gallerysrc.length; i++ ){
 
@@ -26,7 +26,7 @@ function xmlHttpCall(){
                     return function(){
                         ctx[value].drawImage(gallerysrc[value], 0, 0);
                     }
-                })(i);
+                })(i);*/
 
 
 
@@ -35,7 +35,7 @@ function xmlHttpCall(){
 
 
                 var herfWindow=document.createElement("a");
-                herfWindow.setAttribute("href",gallerysrc[i]);
+                herfWindow.setAttribute("href",res[i].src_path);
                 herfWindow.setAttribute("data-size","1600x1067");
 
 
@@ -43,7 +43,7 @@ function xmlHttpCall(){
                 var imagesrc=document.createElement("img");
                 //imagesrc.setAttribute("class","b-lazy");
                 //imagesrc.setAttribute("src","data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==");
-                imagesrc.setAttribute("src",gallerysrc[i]);
+                imagesrc.setAttribute("src",res[i].src_path);
                 imagesrc.setAttribute("alt","alt-text");
 
                 document.getElementById("figure_container").appendChild(divFigure);

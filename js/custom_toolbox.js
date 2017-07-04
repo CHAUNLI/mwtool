@@ -55,7 +55,7 @@ function cardCreate(){
 
 function muskCreate(img_model,index_id){
     var musk = document.createElement('div');
-    musk.className="view overlay hm-white-slight";
+    musk.className="view overlay hm-white-slight z-depth-0";
     var image = document.createElement('img');
     image.setAttribute("src",img_model);
     image.className="img-fluid";
@@ -77,23 +77,23 @@ function cardBlocks(title){
 
     var activator= document.createElement('a');
     activator.className="activator";
-    var icon= document.createElement('i')
-    icon.className="fa fa-share-alt";
+   // var icon= document.createElement('i')
+   // icon.className="fa fa-share-alt";
 
     var cardTitle= document.createElement('h4');
     cardTitle.className="card-title";
     cardTitle.innerHTML=title;
 
 
-    var hr= document.createElement('hr');
+   // var hr= document.createElement('hr');
 
-    var cardText=document.createElement('p');
+   // var cardText=document.createElement('p');
 
     cardBlo.appendChild(activator);
-    activator.appendChild(icon);
+   // activator.appendChild(icon);
     cardBlo.appendChild(cardTitle);
-    cardBlo.appendChild(hr);
-    cardBlo.appendChild(cardText);
+   // cardBlo.appendChild(hr);
+    //cardBlo.appendChild(cardText);
 
     return cardBlo;
 

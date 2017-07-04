@@ -42,6 +42,7 @@ body,
 .carousel-item,
 .active {
     height: 100%;
+
 }
 
 .carousel-inner {
@@ -56,13 +57,19 @@ body,
 }
 
 .carousel-item:nth-child(2) {
-    background-image: url("../img/homeimage3.png");
+    background-image: url("../img/homeimage2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .carousel-item:nth-child(3) {
-    background-image: url("../img/homeimage3.png");
+    background-image: url("../img/homeimage1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.carousel-item:nth-child(4) {
+    background-image: url("../img/homeimage4.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -130,7 +137,7 @@ body,
     }
 }
 
-#slide1,#slide2,#slide3 {
+#slide1,#slide2,#slide3,#slide4 {
     font-size: 72px;
 }
 
