@@ -17,6 +17,8 @@ xmlhttpdrawer.onreadystatechange = function() {
             //document.write(counter.product_title+" -> "+counter.product_series);
 
         }
+        document.getElementById("load5").style.display = "none";
+        document.getElementById("unique_drawer").style.display = "block";
 
     }
 };

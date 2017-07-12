@@ -36,8 +36,63 @@ body,
     height: 100%;
 }
 
+
+
+
 /* Carousel*/
 
+.carousel,
+.carousel-item,
+.active {
+    height: 100%;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+.carousel-item:nth-child(1) {
+    background-image: url("../img/homeimage3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.carousel-item:nth-child(2) {
+    background-image: url("../img/homeimage2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.carousel-item:nth-child(3) {
+    background-image: url("../img/homeimage1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.carousel-item:nth-child(4) {
+    background-image: url("../img/homeimage4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Caption*/
+
+.flex-center {
+    color: #fff;
+}
+
+/*@media (min-width: 776px) {
+    .carousel .view ul li {
+        display: inline;
+    }
+    .carousel .view .full-bg-img ul li .flex-item {
+        margin-bottom: 1.5rem;
+    }
+}*/
+
+/* Carousel*/
+
+/*
 .carousel,
 .carousel-item,
 .active {
@@ -73,9 +128,11 @@ body,
     background-repeat: no-repeat;
     background-size: cover;
 }
+*/
 
 /*Caption*/
 
+/*
 .flex-center {
     color: #fff;
 }
@@ -88,27 +145,29 @@ body,
         margin-bottom: 1.5rem;
     }
 }
+*/
 
 
 
-.carousel-caption {
+/*.carousel-caption {
     height: 100%;
     padding-top: 7rem;
-}
+}*/
 
 .feature-box{
     padding-top: 3rem;
 }
 
 
-.view {
+/*.view {
     background: url("https://mdbootstrap.com/img/Photos/Horizontal/People/12-col/img%20(25).jpg")no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 
-}
+
+}*/
 
 
 @media screen and (max-width: 650px){#shops,#shops_hr{display:none;}}
@@ -116,13 +175,13 @@ body,
 
 
 
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
     .full-bg-img,
     .view {
         height: auto;
         position: relative;
     }
-}
+}*/
 
 .description {
     padding-top: 25%;

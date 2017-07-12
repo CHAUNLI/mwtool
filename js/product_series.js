@@ -19,6 +19,8 @@ xmlhttp1.onreadystatechange = function() {
             //document.write(counter.product_title+" -> "+counter.product_series);
 
         }
+        document.getElementById("load").style.display = "none";
+        document.getElementById("unique_sec").style.display = "block";
 
     }
 };
@@ -36,7 +38,8 @@ trayhttp.onreadystatechange = function() {
             //document.write(counter.product_title+" -> "+counter.product_series);
 
         }
-
+        document.getElementById("load1").style.display = "none";
+        document.getElementById("unique_tray").style.display = "block";
     }
 };
 
@@ -53,6 +56,8 @@ powerhttp.onreadystatechange = function() {
             //document.write(counter.product_title+" -> "+counter.product_series);
 
         }
+        document.getElementById("load2").style.display = "none";
+        document.getElementById("unique_power").style.display = "block";
 
     }
 };

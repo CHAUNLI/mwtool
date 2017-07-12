@@ -43,6 +43,9 @@ function xmlHttpCall(ids){
                 document.getElementById("cusom_width").src = countersUnder.width_img;
                 document.getElementById("cusom_height").src = countersUnder.height_img;
 
+
+                countersUnder.drawbar_img
+                custom_drawbar
             }
         }
 

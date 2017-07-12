@@ -14,7 +14,7 @@ function xmlHttpCall(){
     specific_product.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             var res = JSON.parse(specific_product.responseText);
-            var gallerysrc;
+            var gallery_img=[];
             for (var i = 0; i < res.length; i++) {
                // gallerysrc[i] = res[i].src_path;
            /* }
@@ -31,7 +31,7 @@ function xmlHttpCall(){
 
 
                 var divFigure = document.createElement("figure");
-                divFigure.className="col-md-4";
+                divFigure.className="col-md-3";
 
 
                 var herfWindow=document.createElement("a");
@@ -41,10 +41,14 @@ function xmlHttpCall(){
 
 
                 var imagesrc=document.createElement("img");
+                imagesrc.setAttribute("id","img_"+i);
                 //imagesrc.setAttribute("class","b-lazy");
                 //imagesrc.setAttribute("src","data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==");
-                imagesrc.setAttribute("src",res[i].src_path);
+                imagesrc.setAttribute("src","");
                 imagesrc.setAttribute("alt","alt-text");
+                gallery_img.push(res[i].src_path);
+
+
 
                 document.getElementById("figure_container").appendChild(divFigure);
                 divFigure.appendChild(herfWindow);
@@ -54,6 +58,18 @@ function xmlHttpCall(){
                // img.src    = 'images/'+gallerysrc[i];
             }
 
+            for (var j=0; j< gallery_img.length; j++){
+
+
+                var image_preload=document.getElementById("img_"+j);
+                ///image_preload.src=gallery_img[j];
+                image_preload.onload=function () {
+                    image_preload.src=gallery_img[j];
+                }
+               // document.getElementById("img_"+j).src=gallery_img[j];
+
+
+            }
                /* var gallerysrc = res[i];
                 var divFigure = document.createElement("figure");
                 divFigure.className="col-md-4";

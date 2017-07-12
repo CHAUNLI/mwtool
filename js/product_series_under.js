@@ -17,7 +17,8 @@ xmlhttpunder.onreadystatechange = function() {
             //document.write(counter.product_title+" -> "+counter.product_series);
 
         }
-
+        document.getElementById("load4").style.display = "none";
+        document.getElementById("unique_under").style.display = "block";
     }
 };
 

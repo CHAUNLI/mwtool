@@ -2,6 +2,8 @@
  * Created by MW Toolbox on 10/05/2017.
  */
 $(function () {
+
+
     $("#sub").click(function (e) {
 
 
@@ -19,19 +21,6 @@ $(function () {
         var phonev=$("#phone").val();
         var messagev=$("#message").val();
 
-
-        if(!namev || namev.length === 0) {
-            message = "All fields are mandatory\\nFirst Name is required";
-            messageDialog("Warning", message, "warning", 2);
-            return false;
-        }
-
-        if( !namev.match(letters) ) {
-            message = "Invalid name";
-            messageDialog("Warning", message, "warning", 2);
-            return false;
-        }else {
-
             /* if($("md-form").validate()){*/
             var datapost = {
                 name: namev,
@@ -48,7 +37,7 @@ $(function () {
                 success: function (msg) {
 
                     $this.html("Success");
-                    $this.attr('disabled', false);
+                    $this.attr('disabled', true);
 
                 }
             });
@@ -58,7 +47,7 @@ $(function () {
              }*/
 
 
-        }
+
 
 
     });
