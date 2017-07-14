@@ -37,8 +37,21 @@ function xmlHttpCall(ids){
 
             for (var i = 0; i < res.length; i++) {
                 var countersUnder = res[i];
+                if(countersUnder.length2=="1"){
+                    document.getElementById("custom_length2_div").style.display="none";
+                }
+                if(countersUnder.width2=="1"){
+                    document.getElementById("custom_width2_div").style.display="none";
+                }
+                if(countersUnder.height2=="1"){
+                    document.getElementById("custom_height2_div").style.display="none";
+                }
+                if(countersUnder.para_r=="1"){
+                    document.getElementById("custom_widthr_div").style.display="none";
+                }
                 document.getElementById("custom_title").innerHTML = "Customize Your Trailer " + countersUnder.name;
                 document.getElementById("frame_model").src = countersUnder.sketch_src;
+                document.getElementById("mobile_custtoolbox").src = countersUnder.sketch_model;
                 document.getElementById("cusom_length").src = countersUnder.length_img;
                 document.getElementById("cusom_width").src = countersUnder.width_img;
                 document.getElementById("cusom_height").src = countersUnder.height_img;

@@ -226,7 +226,7 @@
     <div class="container">
         <div class="row">
           <div  class="col-md-12">
-                <img src="img/ute_b_pic.png" class="img-fluid" alt="">
+                <img id="mobile_custrailer" src="" class="img-fluid" alt="">
             </div>
         </div>
     </div>
@@ -295,12 +295,8 @@
 
                         <img id="cusom_length" class="img-fluid" src="" alt="Card image cap">
                         <div class="md-form">
-                            <input type="text" id="custom_length" class="form-control">
-                            <label for="custom_length" class="">Input your length here</label>
-                        </div>
-                        <div class="md-form">
-                            <input type="text" id="custom_drawbar" class="form-control">
-                            <label for="custom_length" class="">Input your drawbar length here</label>
+                            <input type="number" id="custom_length" class="form-control">
+                            <label for="custom_length" data-error="wrong" data-success="">Input your length(mm) here</label>
                         </div>
 
                     </div>
@@ -309,8 +305,8 @@
                     <div class="col-lg-4 col-md-12">
                         <img id="cusom_width" class="img-fluid" src="" alt="Card image cap">
                         <div class="md-form">
-                            <input type="text" id="custom_width" class="form-control">
-                            <label for="custom_width" class="">Input your width here</label>
+                            <input type="number" id="custom_width" class="form-control">
+                            <label for="custom_width" data-error="wrong" data-success="">Input your width(mm) here</label>
                         </div>
                     </div>
 
@@ -318,9 +314,15 @@
                     <div class="col-lg-4 col-md-12">
                         <img id="cusom_height" class="img-fluid" src="" alt="Card image cap">
                         <div class="md-form">
-                            <input type="text" id="custom_height" class="form-control">
-                            <label for="custom_height" class="">Input your height here</label>
+                            <input type="number" id="custom_height" class="form-control">
+                            <label for="custom_height" data-error="wrong" data-success="">Input your height(mm) here</label>
                         </div>
+                    </div>
+                    <div id="custom_drawerbar_div" class="col-lg-4 col-md-12">
+                       <div class="md-form">
+                        <input type="number" id="custom_drawbar" class="form-control">
+                        <label for="custom_length" data-error="wrong" data-success="">Input your drawbar length(mm) here</label>
+                       </div>
                     </div>
 
                 </div>

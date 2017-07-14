@@ -1,0 +1,8 @@
+@media screen and (min-width: 0px) and (max-width: 650px) {
+    #mobile_3d_btn { display: block; }  /* show it on small screens */
+}
+
+@media screen and (min-width: 650px) and (max-width: 5000px) {
+    #mobile_3d_btn { display: none; }   /* hide it elsewhere */
+}
+@media screen and (max-width: 650px){#model_sketch_3d{display:none;}}

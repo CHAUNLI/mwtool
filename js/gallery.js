@@ -2,7 +2,11 @@
  * Created by MW Toolbox on 30/06/2017.
  */
 
-xmlHttpCall();
+
+    xmlHttpCall();
+
+
+
 
 function xmlHttpCall(){
     var specific_product= new XMLHttpRequest();
@@ -60,16 +64,20 @@ function xmlHttpCall(){
 
             for (var j=0; j< gallery_img.length; j++){
 
+                    var image_preload = new Image();
 
-                var image_preload=document.getElementById("img_"+j);
-                ///image_preload.src=gallery_img[j];
-                image_preload.onload=function () {
-                    image_preload.src=gallery_img[j];
-                }
+                    //var image_preload=document.getElementById("img_"+j);
+                    ///image_preload.src=gallery_img[j];
+                    image_preload.onload = function () {
+                        document.getElementById("img_" + j).src = gallery_img[j];
+                    }
+                };
+
+               // image_preload.src="../img/loading.gif";
                // document.getElementById("img_"+j).src=gallery_img[j];
 
 
-            }
+
                /* var gallerysrc = res[i];
                 var divFigure = document.createElement("figure");
                 divFigure.className="col-md-4";

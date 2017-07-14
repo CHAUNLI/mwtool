@@ -120,6 +120,7 @@ function xmlHttpFeaturesCall(ids){
             var res = JSON.parse(specific_product.responseText);
             var img_path=res.img_path;
             var frame_path=res.frame_sketch;
+            document.getElementById("mobile_view").setAttribute("href",frame_path);
             if(img_path!=""){
                 document.getElementById("target_img").src=img_path;
             }

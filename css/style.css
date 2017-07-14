@@ -75,6 +75,19 @@ body,
     background-size: cover;
 }
 
+.carousel-item:nth-child(5) {
+    background-image: url("../img/homeimage5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.carousel-item:nth-child(6) {
+    background-image: url("../img/homeimage6.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
 /*Caption*/
 
 .flex-center {

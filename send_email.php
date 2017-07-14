@@ -5,6 +5,7 @@ $phone = $_POST["phone"];
 $message=$_POST["message"];
 
 $EmailTo = "lambert.lichuan@gmail.com";
+$EmailToMw="mwcp@toolboxcentre.com.au";
 $Subject = "New Message Received";
 // prepare email body text
 
@@ -38,6 +39,7 @@ $Body .= '</body></html>';
 
 // send email
 $success = mail($EmailTo, $Subject, $Body, $headers);
+$success = mail($EmailToMw, $Subject, $Body, $headers);
 $success = mail($email, "success message", "we would contact you quickly", $headers);
 
 // redirect to success page
