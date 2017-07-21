@@ -25,7 +25,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-toggleable-md navbar-dark scrolling-navbar mdb-color darken-1 fixed-top ">
+<nav class="navbar navbar-toggleable-md navbar-dark scrolling-navbar mdb-color darken-1 ">
     <div class="container">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -222,11 +222,11 @@
 </section>
 
 <div id="d3_mobile" class="section">
-    <h1 class="section-heading">Custom Your Model</h1>
+    <h1 id="custom_title_mobile" class="section-heading">Custom Your Model</h1>
     <div class="container">
         <div class="row">
             <div  class="col-md-12">
-                <img src="img/ute_b_pic.png" class="img-fluid" alt="">
+                <img id="mobile_cus_canopy" src="" class="img-fluid" alt="">
             </div>
         </div>
     </div>
@@ -298,10 +298,10 @@
                             <input type="text" id="custom_length" class="form-control">
                             <label for="custom_length" class="">Input your length 1 here</label>
                         </div>
-                        <div class="md-form">
+                      <!--  <div id="custom_length2_div" class="md-form">
                             <input type="text" id="custom_length2" class="form-control">
-                            <label for="custom_length" class="">Input your length 2 here</label>
-                        </div>
+                            <label for="custom_length2" class="">Input your length 2 here</label>
+                        </div>-->
                     </div>
 
 
@@ -312,9 +312,9 @@
                             <input type="text" id="custom_width" class="form-control">
                             <label for="custom_width" class="">Input your width here</label>
                         </div>
-                        <div class="md-form">
-                            <input type="text" id="custom_width2" class="form-control">
-                            <label for="custom_width" class="">Input your width 2 here</label>
+                        <div id="custom_widthr_div" class="md-form">
+                            <input type="text" id="custom_widthr" class="form-control">
+                            <label for="custom_widthr" class="">Input your R here</label>
                         </div>
 
                     </div>
@@ -327,7 +327,7 @@
                             <input type="text" id="custom_height" class="form-control">
                             <label for="custom_height" class="">Input your height here</label>
                         </div>
-                        <div class="md-form">
+                        <div id="custom_height2_div" class="md-form">
                             <input type="text" id="custom_height2" class="form-control">
                             <label for="custom_height2" class="">Input your height2 here</label>
                         </div>
@@ -393,18 +393,22 @@
             <div class="card-block col-12">
                 <div class="col-lg-6">
                     <div class="md-form">
-                        <input type="text" id="custom_name" class="form-control">
-                        <label for="custom_name" class="">Name</label>
+                        <input type="text" id="custom_name" class="form-control validate" onfocusout="myFunction()" required>
+                        <label for="custom_name" data-error="Wrong" data-success="">Name</label>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="md-form">
-                        <input type="number" id="custom_phone" class="form-control">
-                        <label for="custom_phone" class="">Phone</label>
+                        <input type="number" id="custom_phone" class="form-control validate" onfocusout="myPhoneFunction()" required>
+                        <label for="custom_phone" data-error="Wrong" data-success="">Phone</label>
                     </div>
                     <div class="md-form">
-                        <input type="email" id="custom_email" class="form-control">
-                        <label for="custom_email" class="">Email</label>
+                        <input type="email" id="custom_email" class="form-control validate" onfocusout="myEmailFunction()" required>
+                        <label for="custom_email" data-error="Wrong" data-success="">Email</label>
+                    </div>
+                    <div class="md-form">
+                        <input type="number" id="custom_postcode" class="form-control validate" onfocusout="myPostFunction()" required>
+                        <label for="custom_postcode" data-error="Wrong" data-success="">Postcode</label>
                     </div>
                 </div>
 
@@ -602,7 +606,55 @@
 
     });
 </script>
+<script>
+    function myFunction() {
+        var namev = $("#custom_name").val();
 
+        if (namev == "") {
+            $("#custom_name").next("label").attr("data-error", "required");
+            $("#custom_name").removeClass("valid");
+            $("#custom_name").addClass("invalid");
+
+        }
+
+    }
+
+    function myEmailFunction() {
+        var namev = $("#custom_email").val();
+
+        if (namev == "") {
+            $("#custom_email").next("label").attr("data-error", "required");
+            $("#custom_email").removeClass("valid");
+            $("#custom_email").addClass("invalid");
+
+        }
+
+    }
+    function myPhoneFunction() {
+        var namev = $("#custom_phone").val();
+
+        if (namev == "") {
+            $("#custom_phone").next("label").attr("data-error", "required");
+            $("#custom_phone").removeClass("valid");
+            $("#custom_phone").addClass("invalid");
+
+        }
+
+    }
+
+
+    function myPostFunction() {
+        var namev = $("#postcode").val();
+
+        if (namev == "") {
+            $("#postcode").next("label").attr("data-error", "required");
+            $("#postcode").removeClass("valid");
+            $("#postcode").addClass("invalid");
+
+        }
+
+    }
+</script>
 <script>
     $(document).ready(function() {
         $('.mdb-select').material_select();
@@ -613,38 +665,50 @@
             $this.html("Sending");
             $this.attr('disabled',true);
             /* if($("md-form").validate()){*/
-            var datapost ={
 
-                customl:$("#custom_length").val(),
-                customw:$("#custom_width").val(),
-                customh:$("#custom_height").val(),
-                custom_material:$("#custom_material").val(),
-                custom_gs:$("#custom_thickness").val(),
-                custom_lock:$("#custom_lock").val(),
-                name:$("#custom_name").val(),
-                email:$("#custom_email").val(),
-                phone:$("#custom_phone").val(),
-                message:$("#custom_comment").val()
 
-            };
+            var nameval=$("#custom_name").val();
+            var emailval=$("#custom_email").val();
+            var phoneval=$("#custom_phone").val();
 
-            $.ajax({
-                type: "POST",
-                url: "send_custom_project.php",
-                data: datapost,
-                success:function (msg) {
+            if(nameval!=""&&emailval!=""&&phoneval!="") {
+                var datapost = {
 
-                    $this.html("Success");
-                    $this.attr('disabled',false);
+                    custom_title: $("#custom_title").text(),
+                    customl: $("#custom_length").val(),
+                    customw: $("#custom_width").val(),
+                    customr: $("#custom_widthr").val(),
+                    customh: $("#custom_height").val(),
+                    customh2: $("#custom_height2").val(),
+                    custom_material: $("#custom_material").val(),
+                    custom_gs: $("#custom_gs").val(),
+                    custom_thickness: $("#custom_thickness").val(),
+                    custom_lock: $("#custom_lock").val(),
+                    name: $("#custom_name").val(),
+                    email: $("#custom_email").val(),
+                    phone: $("#custom_phone").val(),
+                    message: $("#custom_comment").val(),
+                    postcode:$("#custom_postcode").val()
 
-                }
-            });
-            /* }else{
+                };
+
+                $.ajax({
+                    type: "POST",
+                    url: "send_custom_canopy.php",
+                    data: datapost,
+                    success: function (msg) {
+
+                        $this.html("Success");
+                        $this.attr('disabled', false);
+
+                    }
+                });
+                /* }else{
              $this.html("Fail");
              $this.attr('disabled',false);
              }*/
 
-
+            }
 
 
 

@@ -25,7 +25,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-toggleable-md navbar-dark scrolling-navbar mdb-color darken-1 fixed-top ">
+<nav class="navbar navbar-toggleable-md navbar-dark scrolling-navbar mdb-color darken-1">
     <div class="container">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -222,7 +222,7 @@
 </section>
 
 <div id="d3_mobile" class="section">
-    <h1 class="section-heading">Custom Your Model</h1>
+    <h1 class="section-heading">Customize Your Model</h1>
     <div class="container">
         <div class="row">
           <div  class="col-md-12">
@@ -234,7 +234,7 @@
 
 
 <div id="frame_3d" class="section">
-    <h1 id="custom_title" class="section-heading">Custom Your Model</h1>
+    <h1 id="custom_title" class="section-heading">Customize Your Model</h1>
     <div class="container">
         <div class="card">
           <!--     <iframe src="https://player.vimeo.com/video/214092083"  width="100%" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->
@@ -295,7 +295,7 @@
 
                         <img id="cusom_length" class="img-fluid" src="" alt="Card image cap">
                         <div class="md-form">
-                            <input type="number" id="custom_length" class="form-control">
+                            <input type="number" id="custom_length" class="form-control validate" required>
                             <label for="custom_length" data-error="wrong" data-success="">Input your length(mm) here</label>
                         </div>
 
@@ -305,7 +305,7 @@
                     <div class="col-lg-4 col-md-12">
                         <img id="cusom_width" class="img-fluid" src="" alt="Card image cap">
                         <div class="md-form">
-                            <input type="number" id="custom_width" class="form-control">
+                            <input type="number" id="custom_width" class="form-control validate" required>
                             <label for="custom_width" data-error="wrong" data-success="">Input your width(mm) here</label>
                         </div>
                     </div>
@@ -314,13 +314,13 @@
                     <div class="col-lg-4 col-md-12">
                         <img id="cusom_height" class="img-fluid" src="" alt="Card image cap">
                         <div class="md-form">
-                            <input type="number" id="custom_height" class="form-control">
+                            <input type="number" id="custom_height" class="form-control validate" required>
                             <label for="custom_height" data-error="wrong" data-success="">Input your height(mm) here</label>
                         </div>
                     </div>
                     <div id="custom_drawerbar_div" class="col-lg-4 col-md-12">
                        <div class="md-form">
-                        <input type="number" id="custom_drawbar" class="form-control">
+                        <input type="number" id="custom_drawbar" class="form-control validate" required>
                         <label for="custom_length" data-error="wrong" data-success="">Input your drawbar length(mm) here</label>
                        </div>
                     </div>
@@ -384,18 +384,22 @@
             <div class="card-block col-12">
                 <div class="col-lg-6">
                     <div class="md-form">
-                        <input type="text" id="custom_name" class="form-control">
-                        <label for="custom_name" class="">Name</label>
+                        <input type="text" id="custom_name" class="form-control validate"  onfocusout="myFunction()" required>
+                        <label for="custom_name" data-error="Wrong" data-success="">Name</label>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="md-form">
-                        <input type="number" id="custom_phone" class="form-control">
-                        <label for="custom_phone" class="">Phone</label>
+                        <input type="number" id="custom_phone" class="form-control validate" onfocusout="myPhoneFunction()" required>
+                        <label for="custom_phone" data-error="Wrong" data-success="">Phone</label>
                     </div>
                     <div class="md-form">
-                        <input type="email" id="custom_email" class="form-control">
-                        <label for="custom_email" class="">Email</label>
+                        <input type="email" id="custom_email" class="form-control validate" onfocusout="myEmailFunction()" required/>
+                        <label for="custom_email" data-error="Wrong" data-success="">Email</label>
+                    </div>
+                    <div class="md-form">
+                        <input type="number" id="postcode" class="form-control validate" onfocusout="myPostFunction()" required/>
+                        <label for="postcode" data-error="Wrong" data-success="">Postcode</label>
                     </div>
                 </div>
 
@@ -549,7 +553,55 @@
 <script type="text/javascript" src="js/mdb.min.js"></script>
 
 <script type="text/javascript" src="js/custom_spec.js"></script>
+<script>
+    function myFunction() {
+        var namev = $("#custom_name").val();
 
+        if (namev == "") {
+            $("#custom_name").next("label").attr("data-error", "required");
+            $("#custom_name").removeClass("valid");
+            $("#custom_name").addClass("invalid");
+
+        }
+
+    }
+
+    function myEmailFunction() {
+        var namev = $("#custom_email").val();
+
+        if (namev == "") {
+            $("#custom_email").next("label").attr("data-error", "required");
+            $("#custom_email").removeClass("valid");
+            $("#custom_email").addClass("invalid");
+
+        }
+
+    }
+    function myPhoneFunction() {
+        var namev = $("#custom_phone").val();
+
+        if (namev == "") {
+            $("#custom_phone").next("label").attr("data-error", "required");
+            $("#custom_phone").removeClass("valid");
+            $("#custom_phone").addClass("invalid");
+
+        }
+
+    }
+
+
+    function myPostFunction() {
+        var namev = $("#postcode").val();
+
+        if (namev == "") {
+            $("#postcode").next("label").attr("data-error", "required");
+            $("#postcode").removeClass("valid");
+            $("#postcode").addClass("invalid");
+
+        }
+
+    }
+</script>
 <script>
     $(document).ready(function() {
         var navListItems = $('ul.setup-panel li a'),
@@ -604,24 +656,32 @@
             $this.html("Sending");
             $this.attr('disabled',true);
             /* if($("md-form").validate()){*/
-            var datapost ={
+            var nameval=$("#custom_name").val();
+            var emailval=$("#custom_email").val();
+            var phoneval=$("#custom_phone").val();
 
+            if(nameval!=""&&emailval!=""&&phoneval!="") {
+            var datapost ={
+                custom_title: $("#custom_title").text(),
                 customl:$("#custom_length").val(),
                 customw:$("#custom_width").val(),
                 customh:$("#custom_height").val(),
+                customd:$("#custom_drawbar").val(),
                 custom_material:$("#custom_material").val(),
-                custom_gs:$("#custom_thickness").val(),
+                custom_gs:$("#custom_gs").val(),
+                custom_thickness:$("#custom_thickness").val(),
                 custom_lock:$("#custom_lock").val(),
                 name:$("#custom_name").val(),
                 email:$("#custom_email").val(),
                 phone:$("#custom_phone").val(),
+                postcode:$("#postcode").val(),
                 message:$("#custom_comment").val()
 
             };
 
             $.ajax({
                 type: "POST",
-                url: "send_custom_project.php",
+                url: "send_custom_trailer.php",
                 data: datapost,
                 success:function (msg) {
 
@@ -635,7 +695,10 @@
              $this.attr('disabled',false);
              }*/
 
-
+            }else{
+                $this.html("Must Input(Name, Email, Phone)");
+                $this.attr('disabled', false);
+            }
 
 
 

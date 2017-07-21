@@ -24,7 +24,7 @@
 
 </head>
 <body>
-<nav class="navbar navbar-toggleable-md navbar-dark scrolling-navbar mdb-color darken-1 fixed-top ">
+<nav class="navbar navbar-toggleable-md navbar-dark scrolling-navbar mdb-color darken-1 ">
     <div class="container">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -294,12 +294,12 @@
 
                         <img id="cusom_length" class="img-fluid" src="" alt="Card image cap">
                         <div class="md-form">
-                            <input type="number" id="custom_length" class="form-control">
-                            <label for="custom_length" class="">Input your length 1 here</label>
+                            <input type="number" id="custom_length" class="form-control validate" required>
+                            <label for="custom_length" data-error="Wrong" data-success="">Input your length 1 here</label>
                         </div>
                         <div class="md-form" id="custom_length2_div">
-                            <input type="number" id="custom_length2" class="form-control">
-                            <label for="custom_length" class="">Input your length 2 here</label>
+                            <input type="number" id="custom_length2" class="form-control validate" required>
+                            <label for="custom_length" data-error="Wrong" data-success="">Input your length 2 here</label>
                         </div>
 
                     </div>
@@ -309,16 +309,16 @@
                     <div class="col-lg-4 col-md-12">
                         <img id="cusom_width" class="img-fluid" src="" alt="Card image cap">
                         <div class="md-form">
-                            <input type="number" id="custom_width" class="form-control">
-                            <label for="custom_width" class="">Input your width here</label>
+                            <input type="number" id="custom_width" class="form-control validate" required>
+                            <label for="custom_width" data-error="Wrong" data-success="">Input your width here</label>
                         </div>
                         <div class="md-form" id="custom_width2_div">
-                            <input type="number" id="custom_width2" class="form-control">
-                            <label for="custom_width" class="">Input your width2 here</label>
+                            <input type="number" id="custom_width2" class="form-control validate" required>
+                            <label for="custom_width" data-error="Wrong" data-success="">Input your width2 here</label>
                         </div>
                         <div class="md-form" id="custom_widthr_div">
-                            <input type="number" id="custom_widthr" class="form-control">
-                            <label for="custom_width" class="">Input your R here</label>
+                            <input type="number" id="custom_widthr" class="form-control validate" required>
+                            <label for="custom_width" data-error="Wrong" data-success="">Input your R here</label>
                         </div>
                     </div>
 
@@ -327,12 +327,12 @@
                     <div class="col-lg-4 col-md-12">
                         <img id="cusom_height" class="img-fluid" src="" alt="Card image cap">
                         <div class="md-form">
-                            <input type="number" id="custom_height" class="form-control">
-                            <label for="custom_height" class="">Input your height 1 here</label>
+                            <input type="number" id="custom_height" class="form-control validate" required>
+                            <label for="custom_height" data-error="Wrong" data-success="">Input your height 1 here</label>
                         </div>
                         <div class="md-form" id="custom_height2_div" >
-                            <input type="number" id="custom_height2" class="form-control">
-                            <label for="custom_height" class="">Input your height 2 here</label>
+                            <input type="number" id="custom_height2" class="form-control validate" required>
+                            <label for="custom_height" data-error="Wrong" data-success="">Input your height 2 here</label>
                         </div>
                     </div>
 
@@ -397,18 +397,22 @@
             <div class="card-block col-12">
                 <div class="col-lg-6">
                     <div class="md-form">
-                        <input type="text" id="custom_name" class="form-control">
-                        <label for="custom_name" class="">Name</label>
+                        <input type="text" id="custom_name" class="form-control validate" onfocusout="myFunction()" required>
+                        <label for="custom_name" data-error="Wrong" data-success="">Name</label>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="md-form">
-                        <input type="number" id="custom_phone" class="form-control">
-                        <label for="custom_phone" class="">Phone</label>
+                        <input type="number" id="custom_phone" class="form-control validate" onfocusout="myPhoneFunction()" required>
+                        <label for="custom_phone" data-error="Wrong" data-success="">Phone</label>
                     </div>
                     <div class="md-form">
-                        <input type="email" id="custom_email" class="form-control">
-                        <label for="custom_email" class="">Email</label>
+                        <input type="email" id="custom_email" class="form-control validate"  onfocusout="myEmailFunction()" required>
+                        <label for="custom_email" data-error="Wrong" data-success="">Email</label>
+                    </div>
+                    <div class="md-form">
+                        <input type="number" id="postcode" class="form-control validate"  onfocusout="myPostFunction()" required>
+                        <label for="postcode" data-error="Wrong" data-success="">Postcode</label>
                     </div>
                 </div>
 
@@ -606,7 +610,55 @@
 
     });
 </script>
+<script>
+    function myFunction() {
+        var namev = $("#custom_name").val();
 
+        if (namev == "") {
+            $("#custom_name").next("label").attr("data-error", "required");
+            $("#custom_name").removeClass("valid");
+            $("#custom_name").addClass("invalid");
+
+        }
+
+    }
+
+    function myEmailFunction() {
+        var namev = $("#custom_email").val();
+
+        if (namev == "") {
+            $("#custom_email").next("label").attr("data-error", "required");
+            $("#custom_email").removeClass("valid");
+            $("#custom_email").addClass("invalid");
+
+        }
+
+    }
+    function myPhoneFunction() {
+        var namev = $("#custom_phone").val();
+
+        if (namev == "") {
+            $("#custom_phone").next("label").attr("data-error", "required");
+            $("#custom_phone").removeClass("valid");
+            $("#custom_phone").addClass("invalid");
+
+        }
+
+    }
+
+
+    function myPostFunction() {
+        var namev = $("#postcode").val();
+
+        if (namev == "") {
+            $("#postcode").next("label").attr("data-error", "required");
+            $("#postcode").removeClass("valid");
+            $("#postcode").addClass("invalid");
+
+        }
+
+    }
+</script>
 <script>
     $(document).ready(function() {
         $('.mdb-select').material_select();
@@ -617,38 +669,53 @@
             $this.html("Sending");
             $this.attr('disabled',true);
             /* if($("md-form").validate()){*/
-            var datapost ={
+            var nameval=$("#custom_name").val();
+            var emailval=$("#custom_email").val();
+            var phoneval=$("#custom_phone").val();
 
-                customl:$("#custom_length").val(),
-                customw:$("#custom_width").val(),
-                customh:$("#custom_height").val(),
-                custom_material:$("#custom_material").val(),
-                custom_gs:$("#custom_thickness").val(),
-                custom_lock:$("#custom_lock").val(),
-                name:$("#custom_name").val(),
-                email:$("#custom_email").val(),
-                phone:$("#custom_phone").val(),
-                message:$("#custom_comment").val()
+            if(nameval!=""&&emailval!=""&&phoneval!="") {
+                var datapost = {
 
-            };
+                    custom_title: $("#custom_title").text(),
+                    customl: $("#custom_length").val(),
+                    customl2: $("#custom_length2").val(),
+                    customw: $("#custom_width").val(),
+                    customw2: $("#custom_width2").val(),
+                    customwr: $("#custom_widthr").val(),
+                    customh: $("#custom_height").val(),
+                    customh2: $("#custom_height2").val(),
+                    custom_material: $("#custom_material").val(),
+                    custom_gs: $("#custom_gs").val(),
+                    custom_lock: $("#custom_lock").val(),
+                    name: $("#custom_name").val(),
+                    email: $("#custom_email").val(),
+                    phone: $("#custom_phone").val(),
+                    postcode:$("#postcode").val(),
+                    message: $("#custom_comment").val(),
+                    thickness:$("#custom_thickness").val()
 
-            $.ajax({
-                type: "POST",
-                url: "send_custom_project.php",
-                data: datapost,
-                success:function (msg) {
+                };
 
-                    $this.html("Success");
-                    $this.attr('disabled',false);
+                $.ajax({
+                    type: "POST",
+                    url: "send_custom_project.php",
+                    data: datapost,
+                    success: function (msg) {
 
-                }
-            });
-            /* }else{
+                        $this.html(msg);
+                        $this.attr('disabled', true);
+
+                    }
+                });
+                /* }else{
              $this.html("Fail");
              $this.attr('disabled',false);
              }*/
 
-
+            }else{
+                $this.html("Must Input(name, Email, phone)");
+                $this.attr('disabled', false);
+            }
 
 
 

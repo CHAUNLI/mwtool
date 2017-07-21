@@ -237,20 +237,26 @@
                         <div class="md-form form-group">
                             <i class="fa fa-user prefix"></i>
                             <input type="text" id="call-name" class="form-control validate" onfocusout="myFunction()" required>
-                            <label id="name_label" for="call-name" data-error="required" data-success="">Your name</label>
+                            <label for="call-name" data-error="wrong" data-success="">Your name</label>
 
                         </div>
 
                         <div class="md-form form-group">
                             <i class="fa fa-envelope prefix"></i>
-                            <input type="email" id="email" class="form-control validate" onfocusout="myFunction()" required>
+                            <input type="email" id="email" class="form-control validate" onfocusout="myEmailFunction()" required>
                             <label id="email_label" for="email" data-error="wrong" data-success="">Your email</label>
                         </div>
 
                         <div class="md-form form-group">
                             <i class="fa fa-tag prefix"></i>
-                            <input type="number" id="phone" class="form-control validate" required>
+                            <input type="number" id="phone" class="form-control validate" onfocusout="myPhoneFunction()" required>
                             <label id="phone_label" for="phone" data-error="wrong" data-success="">Your phone number</label>
+                        </div>
+
+                        <div class="md-form">
+                            <i class="fa fa-pencil prefix"></i>
+                            <input type="number" id="postcode"class="form-control validate" onfocusout="myPhoneFunction()"></input>
+                            <label for="postcode" data-error="wrong" data-success="">Postcode</label>
                         </div>
 
                         <div class="md-form">
@@ -888,7 +894,6 @@
 <script type="text/javascript" src="js/mdb.min.js"></script>
 
 
-
 <!--<script type="text/javascript" src="js/contact.js"></script>
 <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
 </script>
@@ -899,14 +904,39 @@
 <script type="text/javascript" src="js/submitemail.js"></script>
 
 <script>
-    function myFunction(){
-        var x = document.getElementById("call-name");
-       /* if(x=="") {
-            x.value = x.value.toUpperCase();
-        }else {*/
-            document.getElementById("name_label").setAttribute("data-error","empty");
-        document.getElementById("call-name").className.replace("form-control invalid");
-       /* }*/
+    function myFunction() {
+        var namev = $("#call-name").val();
+
+        if (namev == "") {
+            $("#call-name").next("label").attr("data-error", "required");
+            $("#call-name").removeClass("valid");
+            $("#call-name").addClass("invalid");
+
+        }
+
+    }
+
+    function myEmailFunction() {
+        var namev = $("#email").val();
+
+        if (namev == "") {
+            $("#email").next("label").attr("data-error", "required");
+            $("#email").removeClass("valid");
+            $("#email").addClass("invalid");
+
+        }
+
+    }
+    function myPhoneFunction() {
+        var namev = $("#phone").val();
+
+        if (namev == "") {
+            $("#phone").next("label").attr("data-error", "required");
+            $("#phone").removeClass("valid");
+            $("#phone").addClass("invalid");
+
+        }
+
     }
 </script>
 

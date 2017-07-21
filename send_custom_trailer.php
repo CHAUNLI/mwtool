@@ -1,4 +1,12 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: MW Toolbox
+ * Date: 20/07/2017
+ * Time: 8:58 AM
+ */
+
+
 $title_name=$_POST["custom_title"];
 $name = $_POST["name"];
 $email = $_POST["email"];
@@ -6,16 +14,16 @@ $phone = $_POST["phone"];
 $postcode=$_POST["postcode"];
 $message=$_POST["message"];
 $cus_length=$_POST["customl"];
-$cus_length2=$_POST["customl2"];
+
 $cus_width=$_POST["customw"];
-$cus_width2=$_POST["customw2"];
+
 $cus_widthr=$_POST["customwr"];
 $cus_height=$_POST["customh"];
-$cus_height2=$_POST["customh2"];
+$cus_drawbar=$_POST["customd"];
 $cus_material=$_POST["custom_material"];
 $cus_gs=$_POST["custom_gs"];
 $cus_lock=$_POST["custom_lock"];
-$cus_thick=$_POST["thickness"];
+$cus_thick=$_POST["custom_thickness"];
 
 $EmailTo = "lambert.lichuan@gmail.com";
 $EmailToMw = "mwcp@toolboxcentre.com.au";
@@ -82,21 +90,10 @@ $Body ='<html><body>
 <td style="width: 102px;"><span style="font-size: 14pt;">Height</span></td>
 <td style="width: 322px;"><span style="font-size: 14pt;">'.$cus_height.'</span></td>
 </tr>
+
 <tr>
-<td style="width: 102px;"><span style="font-size: 14pt;">Length 2</span></td>
-<td style="width: 322px;"><span style="font-size: 14pt;">'.$cus_length2.'</span></td>
-</tr>
-<tr>
-<td style="width: 102px;"><span style="font-size: 14pt;">Width 2</span></td>
-<td style="width: 322px;"><span style="font-size: 14pt;">'.$cus_width2.'</span></td>
-</tr>
-<tr>
-<td style="width: 102px;"><span style="font-size: 14pt;">Height 2</span></td>
-<td style="width: 322px;"><span style="font-size: 14pt;">'.$cus_height2.'</span></td>
-</tr>
-<tr>
-<td style="width: 102px;"><span style="font-size: 14pt;">R</span></td>
-<td style="width: 322px;"><span style="font-size: 14pt;">'.$cus_widthr.'</span></td>
+<td style="width: 102px;"><span style="font-size: 14pt;">Drawbar</span></td>
+<td style="width: 322px;"><span style="font-size: 14pt;">'.$cus_drawbar.'</span></td>
 </tr>
 <tr>
 <td style="width: 102px;"><span style="font-size: 14pt;">Material</span></td>

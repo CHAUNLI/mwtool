@@ -49,7 +49,7 @@ function xmlHttpCall(ids){
                 if(countersUnder.para_r=="1"){
                     document.getElementById("custom_widthr_div").style.display="none";
                 }
-                document.getElementById("custom_title").innerHTML = "Customize Your Trailer " + countersUnder.name;
+                document.getElementById("custom_title").innerHTML = "Customize Your " + countersUnder.name;
                 document.getElementById("frame_model").src = countersUnder.sketch_src;
                 document.getElementById("mobile_custtoolbox").src = countersUnder.sketch_model;
                 document.getElementById("cusom_length").src = countersUnder.length_img;

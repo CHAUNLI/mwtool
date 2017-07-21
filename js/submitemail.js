@@ -19,21 +19,26 @@ $(function () {
         var namev=$("#call-name").val();
         var emailv=$("#email").val();
         var phonev=$("#phone").val();
+        var codev=$("#postcode").val();
         var messagev=$("#message").val();
 
+        if(namev!=""&&emailv!=""&&phonev!="") {
             /* if($("md-form").validate()){*/
             var datapost = {
                 name: namev,
                 email: emailv,
                 phone: phonev,
+                postcode:codev,
                 message: messagev
 
             };
+
 
             $.ajax({
                 type: "POST",
                 url: "send_email.php",
                 data: datapost,
+
                 success: function (msg) {
 
                     $this.html("Success");
@@ -45,8 +50,11 @@ $(function () {
              $this.html("Fail");
              $this.attr('disabled',false);
              }*/
+        }else {
+            $this.html("Try again");
+            $this.attr('disabled', false);
 
-
+        }
 
 
 
