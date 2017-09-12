@@ -5,6 +5,20 @@
 
     xmlHttpCall();
 
+function preload(imageArray, index) {
+    index = index || 0;
+    if (imageArray && imageArray.length > index) {
+        var img = new Image();
+        img= document.getElementById("img_"+index);
+        img.onload = function () {
+            preload(imageArray, index + 1);
+        }
+         img.src = imageArray[index];
+    }
+}
+    /* images is an array with image metadata */
+   // preload(images);
+
 
 
 
@@ -35,7 +49,7 @@ function xmlHttpCall(){
 
 
                 var divFigure = document.createElement("figure");
-                divFigure.className="col-md-3";
+                divFigure.className="col-md-4";
 
 
                 var herfWindow=document.createElement("a");
@@ -46,10 +60,10 @@ function xmlHttpCall(){
 
                 var imagesrc=document.createElement("img");
                 imagesrc.setAttribute("id","img_"+i);
-                //imagesrc.setAttribute("class","b-lazy");
+               // imagesrc.setAttribute("class","lazy");
                 //imagesrc.setAttribute("src","data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==");
-                imagesrc.setAttribute("src","");
-                imagesrc.setAttribute("alt","alt-text");
+                //imagesrc.setAttribute("src","");
+               // imagesrc.setAttribute("alt","alt-text");
                 gallery_img.push(res[i].src_path);
 
 
@@ -62,17 +76,27 @@ function xmlHttpCall(){
                // img.src    = 'images/'+gallerysrc[i];
             }
 
-            for (var j=0; j< gallery_img.length; j++){
+            preload(gallery_img, 0);
+
+/*
+                 var j=0;
+         //   for (var j=0; j< gallery_img.length; j++){
 
                     var image_preload = new Image();
 
-                    //var image_preload=document.getElementById("img_"+j);
-                    ///image_preload.src=gallery_img[j];
-                    image_preload.onload = function () {
-                        document.getElementById("img_" + j).src = gallery_img[j];
-                    }
-                };
+                    var image_preload=document.getElementById("img_"+j);
 
+
+                //image_preload.setAttribute("class","lazy");
+                   image_preload.setAttribute("src",gallery_img[j]);
+                    image_preload.onload = function () {
+                        var image_preload2 = new Image();
+                        var image_preload2 = document.getElementById("img_"+(j+1));
+                       // document.getElementById("img_" + j).setAttribute("src",gallery_img[j]);
+                        image_preload2.src= gallery_img[j+1];
+                    }*/
+             //   };
+            //= gallery_img[j];
                // image_preload.src="../img/loading.gif";
                // document.getElementById("img_"+j).src=gallery_img[j];
 

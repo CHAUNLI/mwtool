@@ -19,6 +19,9 @@ $cus_thick=$_POST["thickness"];
 
 $EmailTo = "lambert.lichuan@gmail.com";
 $EmailToMw = "mwcp@toolboxcentre.com.au";
+$EmailToGC = "goldcoast@toolboxcentre.com.au";
+$EmailToV = "mwqld@toolboxcentre.com.au";
+$EmailToDerek = "derekwu@toolboxcentre.com.au";
 $Subject = "New Message Received";
 // prepare email body text
 
@@ -120,9 +123,30 @@ $Body ='<html><body>
 <p></p>
 <p></p>
 <p><strong><span style="font-size: 12pt; color: #008000;">Your MW toolbox Team</span></strong></p>
-<p><span style="font-size: 8pt;">Phone: +61 7 38751066</span></p>
+<p><span style="font-size: 8pt;">Coopers Plains</span></p>
+<p><span style="font-size: 8pt;">Phone: 07 3875 1066</span></p>
 <p><span style="font-size: 8pt;">Email: mwcp@toolboxcentre.com.au</span></p>
 <p><span style="font-size: 8pt;">Address: 754 Beaudesert Road, Coopers Plains, QLD 4108</span></p>
+<p><span style="font-size: 8pt;">Albion</span></p>
+<p><span style="font-size: 8pt;">Phone: 07 3262 4577</span></p>
+<p><span style="font-size: 8pt;">Email: mwqld@toolboxcentre.com.au</span></p>
+<p><span style="font-size: 8pt;">Address: 174 Sandgate Road, Albion, QLD 4010</span></p>
+<p><span style="font-size: 8pt;">Virginia</span></p>
+<p><span style="font-size: 8pt;">Phone: 07 3865 3300</span></p>
+<p><span style="font-size: 8pt;">Email: virginia@toolboxcentre.com.au</span></p>
+<p><span style="font-size: 8pt;">Address: 2/2023 Sandgate Road, Virginia, QLD, 4014</span></p>
+<p><span style="font-size: 8pt;">Gold Coast</span></p>
+<p><span style="font-size: 8pt;">Phone: 07 5537 7004</span></p>
+<p><span style="font-size: 8pt;">Email: goldcoast@toolboxcentre.com.au</span></p>
+<p><span style="font-size: 8pt;">Address: 223 Brisbane Road, Labrador, QLD 4215</span></p>
+<p><span style="font-size: 8pt;">Townsville</span></p>
+<p><span style="font-size: 8pt;">Phone: 07 4725 5280</span></p>
+<p><span style="font-size: 8pt;">Email: townsville@toolboxcentre.com.au</span></p>
+<p><span style="font-size: 8pt;">Address: 1/298 Bayswater Road, Garbutt, QLD 4814</span></p>
+<p><span style="font-size: 8pt;">Rockhampton</span></p>
+<p><span style="font-size: 8pt;">Phone: 07 4928 1977</span></p>
+<p><span style="font-size: 8pt;">Email: rockhampton@toolboxcentre.com.au</span></p>
+<p><span style="font-size: 8pt;">Address: 397 Yaamba Road, Park Avenue, QLD 4701</span></p>
 </td>
 </tr>
 </tbody>
@@ -189,9 +213,12 @@ $Body .= "\n";
 $Body .= '</body></html>';*/
 
 // send email
-$success = mail($EmailTo, $Subject, $Body, $headers);
-$success = mail($EmailToMw, $Subject, $Body, $headers);
-$success = mail($email, "MW toolbox", $Body, $headers);
+
+    $success = mail($EmailTo, $Subject, $Body, $headers);
+    $success = mail($EmailToV, $Subject, $Body, $headers);
+    $success = mail($EmailToDerek, $Subject, $Body, $headers);
+    $success = mail($email, "MW toolbox", $Body, $headers);
+
 
 // redirect to success page
 if ($success){

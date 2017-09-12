@@ -52,7 +52,7 @@ body,
 }
 
 .carousel-item:nth-child(1) {
-    background-image: url("../img/homeimage3.png");
+    background-image: url("../img/homeimage3.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }

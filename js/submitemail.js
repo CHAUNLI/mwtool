@@ -43,6 +43,7 @@ $(function () {
 
                     $this.html("Success");
                     $this.attr('disabled', true);
+                    $("#basicExample").modal("show");
 
                 }
             });
