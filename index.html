@@ -716,26 +716,11 @@
     </div>
 </section>
 <!--/Projects section v.4-->
-<hr id="shops_hr" class="between-sections">
+
 
 <div class="section">
 
-        <div class="row">
-            <div class="col-lg-4 col-md-12 flex-center"> <iframe width="100%" height="200" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=754%20Beaudesert%20Rd%2C%20Coopers%20Plains%20QLD%204108%2C%20Australia&key=AIzaSyAZgoQFTAw-ImhOnfuuILxxhLOobMdgvRA" allowfullscreen></iframe>
-            </div>
-            <div class="col-lg-4 col-md-12 flex-center"> <iframe width="100%" height="200" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=174%20Sandgate%20Road%2C%20Albion%2C%20QLD%204010&key=AIzaSyAZgoQFTAw-ImhOnfuuILxxhLOobMdgvRA" allowfullscreen></iframe>
-            </div>
-            <div class="col-lg-4 col-md-12 flex-center"> <iframe width="100%" height="200" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=223%20Brisbane%20Road%2C%20Labrador%2C%20QLD%204215&key=AIzaSyAZgoQFTAw-ImhOnfuuILxxhLOobMdgvRA" allowfullscreen></iframe>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-12 flex-center">     <iframe width="100%" height="200" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=1%2F298%20Bayswater%20Road%2C%20Garbutt%2C%20QLD%204814&key=AIzaSyAZgoQFTAw-ImhOnfuuILxxhLOobMdgvRA" allowfullscreen></iframe>
-            </div>
-            <div class="col-lg-4 col-md-12 flex-center"><iframe width="100%" height="200" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=2%2F2023%20Sandgate%20Road%2C%20Virginia%2C%20QLD%2C%204014&key=AIzaSyAZgoQFTAw-ImhOnfuuILxxhLOobMdgvRA" allowfullscreen></iframe>
-            </div>
-            <div class="col-lg-4 col-md-12 flex-center"> <iframe width="100%" height="200" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=397%20Yaamba%20Road%2C%20Park%20Avenue%2C%20QLD%204701&key=AIzaSyAZgoQFTAw-ImhOnfuuILxxhLOobMdgvRA" allowfullscreen></iframe>
-            </div>
-    </div>
+    <div id="map" class="z-depth-1-half map-container" style="height: 400px"></div>
 
 </div>
 
@@ -1038,6 +1023,12 @@
 <!--<script type="text/javascript" src="https://www.amcharts.com/lib/3/maps/js/australiaLow.js"></script>&ndash;&gt;
 <script type="text/javascript" src="js/chart.js"></script>-->
 
+<script type="text/javascript" src="js/contact.js"></script>
+<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBA6vjslRL_shkE2XKRtZhHPxlUTrc5kT8&callback=initMap">
+</script>-->
 <script>
     $(window).scroll(function() {
         if($(window).scrollTop() + $(window).height() == $(document).height()) {
