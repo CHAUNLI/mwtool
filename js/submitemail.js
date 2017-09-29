@@ -15,6 +15,7 @@ $(function () {
         $this=$(this);
         $this.html("Sending");
         $this.attr('disabled',true);
+        var url=window.location.href;
 
         var namev=$("#call-name").val();
         var emailv=$("#email").val();
@@ -43,6 +44,7 @@ $(function () {
 
                     $this.html("Success");
                     $this.attr('disabled', true);
+                    window.location.href=url+"&success";
                     $("#basicExample").modal("show");
 
                 }
