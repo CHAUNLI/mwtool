@@ -1,0 +1,12 @@
+
+@media screen and (min-width: 0px) and (max-width: 650px) {
+    #d3_mobile { display: block; }  /* show it on small screens */
+}
+
+@media screen and (min-width: 650px) and (max-width: 5000px) {
+    #d3_mobile { display: none; }   /* hide it elsewhere */
+}
+@media screen and (max-width: 650px){#frame_3d{display:none;}}
+
+
+
